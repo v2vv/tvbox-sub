@@ -1,6 +1,286 @@
 {
-  "spider": "https://v2vv.github.io/tvbox-sub/pg.jar",
+  "lives": [
+    {
+      "name": "肥羊国内直播",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/tv.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "肥羊TPTV",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/tptv.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "肥羊B站直播",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/bililive.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "肥羊虎牙一起看",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/huyayqk.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "肥羊斗鱼一起看",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/douyuyqk.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "肥羊YY轮播",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/yylunbo.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "Gather.电视直播",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/https://tv.iill.top/m3u/Gather",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "Gather.网络直播",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/https://tv.iill.top/m3u/Live",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "Gather.MyTV",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/https://tv.iill.top/m3u/MyTV",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.4GTV",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/4gtv.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.BeeSport",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/beesport.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.TheTV",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/thetv.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.DLHD",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/dlhd.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.ITV",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/itv_proxy.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.TPTV",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/tptv.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.MyTVSuper",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/mytvsuper.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "PixMan.Hami",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/hami.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "zouming.ipv6",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/proxy/http://ww.zouming.com/ipv6.txt",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "live.ipv6",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/proxy/https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "live.ipv6.m3u",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/c/3600/proxy/https://live.fanmingming.com/tv/m3u/ipv6.m3u",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "live.ipv6.local",
+      "type": 0,
+      "url": "https://tvbox.lvhongyuan.site/lib/live.ipv6.txt",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "live.fan",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/https://raw.githubusercontent.com/dxawi/0/main/tvlive.txt",
+      "ua": "okhttp/3.15",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "YTLive",
+      "type": 0,
+      "url": "https://tvbox.lvhongyuan.site/lib/yo21.txt"
+    },
+    {
+      "name": "直播",
+      "type": 0,
+      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "name": "TXT",
+      "type": 0,
+      "url": "http://home.jundie.top:81/Cat/tv/live.txt",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+    },
+    {
+      "name": "Json",
+      "type": 1,
+      "url": "http://127.0.0.1:10079/p/0/proxy/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/live.json",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+    },
+    {
+      "name": "live.feimao",
+      "type": 0,
+      "url": "http://127.0.0.1:10079/p/0/proxy/http://我不是.肥猫.live/TV/tvzb.txt",
+      "ua": "okhttp/3.12.13",
+      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
+      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
+    },
+    {
+      "group": "redirect",
+      "channels": [
+        {
+          "name": "redirect",
+          "urls": ["proxy://do=live&type=live&proxy=&url="]
+        }
+      ]
+    }
+  ],
+  "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
+  "flags": [
+    "youku",
+    "qq",
+    "iqiyi",
+    "qiyi",
+    "letv",
+    "sohu",
+    "tudou",
+    "pptv",
+    "mgtv",
+    "wasu"
+  ],
   "sites": [
+    {
+      "ext": "eyJhcGkiOiJodHRwOi8vMTkyLjE2OC4xLjc6NDU2NyIsInRva2VuIjoiIn0=",
+      "filterable": 1,
+      "quickSearch": 1,
+      "name": "AList",
+      "changeable": 0,
+      "jar": "http://192.168.1.7:4567/spring.jar",
+      "api": "csp_AList",
+      "type": 3,
+      "key": "csp_AList",
+      "searchable": 1
+    },
+    {
+      "ext": "eyJhcGkiOiJodHRwOi8vMTkyLjE2OC4xLjc6NDU2NyIsInRva2VuIjoiIn0=",
+      "filterable": 1,
+      "quickSearch": 1,
+      "name": "BiliBili",
+      "changeable": 0,
+      "jar": "http://192.168.1.7:4567/spring.jar",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "api": "csp_BiliBili",
+      "type": 3,
+      "key": "csp_BiliBili",
+      "searchable": 1
+    },
+    {
+      "ext": "eyJhcGkiOiJodHRwOi8vMTkyLjE2OC4xLjc6NDU2NyIsInRva2VuIjoiIn0=",
+      "filterable": 1,
+      "quickSearch": 1,
+      "playerType": 2,
+      "name": "YouTube",
+      "changeable": 0,
+      "jar": "http://192.168.1.7:4567/spring.jar",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "api": "csp_Youtube",
+      "type": 3,
+      "key": "csp_Youtube",
+      "searchable": 1
+    },
     {
       "key": "豆瓣",
       "name": "豆瓣",
@@ -9,7 +289,8 @@
       "searchable": 0,
       "changeable": 1,
       "indexs": 1,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/douban.json"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/douban.json",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "TGDouban",
@@ -18,20 +299,21 @@
       "api": "csp_TGDouban",
       "timeout": 120,
       "ext": {
-        "token": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
-        "json": "./lib/tgsearch.json",
+        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
+        "json": "https://tvbox.lvhongyuan.site/lib/tgsearch.json",
         "keywords": "名称,片名,推荐",
         "tgsearch_url": "http://127.0.0.1:10199",
         "tgsearch_media_url": "http://127.0.0.1:10199",
         "channellist": "alypzyhzq|1000,Mbox115|1000,shares_115|1000,Quark_Share_Channel|1000,Aliyundrive_Share_Channel|1000,wanwansubchat|1000",
         "proxy": "noproxy",
-        "douban": "./lib/douban.json",
+        "douban": "https://tvbox.lvhongyuan.site/lib/douban.json",
         "danmu": true
       },
       "style": {
         "type": "rect",
         "ratio": 0.7
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Youtube",
@@ -43,8 +325,8 @@
       "changeable": 0,
       "timeout": 120,
       "ext": {
-        "token": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
-        "json": "./lib/youtube.json",
+        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
+        "json": "https://tvbox.lvhongyuan.site/lib/youtube.json",
         "type": "直播#新闻#剧集#电影#综艺#纪录片#音乐#体育#动物#风光#放松#4K#HDR#movie#music#documentary#bbc documentary#national geographic documentary",
         "keywords": "排行榜,HOT,TRENDS,热门话题,热门趋势,热门综艺,热门电影,热门电视剧,小姐姐",
         "codecs": "",
@@ -54,7 +336,8 @@
       "style": {
         "type": "rect",
         "ratio": 1.77
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "网盘配置",
@@ -63,13 +346,20 @@
       "api": "csp_Config",
       "searchable": 0,
       "changeable": 0,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
       "style": {
         "type": "rect",
         "ratio": 1.5
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
-    { "key": "Local", "name": "本地", "type": 3, "api": "csp_Local" },
+    {
+      "key": "Local",
+      "name": "本地",
+      "type": 3,
+      "api": "csp_Local",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+    },
     {
       "key": "PushShare",
       "name": "我的资源分享",
@@ -80,11 +370,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://v2vv.github.io/tvbox-sub/lib/pushshare.txt$$$db$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/pushshare.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "AlistShare",
@@ -96,11 +387,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 120,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$null$$$proxy$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "AliShare",
@@ -112,11 +404,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/alishare.txt$$$db$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/alishare.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "AliShareEBook",
@@ -128,11 +421,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/alishare.ebook.txt$$$db$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/alishare.ebook.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "QuarkShare",
@@ -144,11 +438,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/quarkshare.txt",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/quarkshare.txt",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "115Share",
@@ -160,11 +455,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 120,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/115share.txt$$$db$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/115share.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "UCShare",
@@ -176,11 +472,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/ucshare.txt$$$db$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/ucshare.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "ThunderShare",
@@ -192,11 +489,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/thundershare.txt",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/thundershare.txt",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "PikPakShare",
@@ -208,11 +506,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/pikpakclass.json$$$./lib/pikpakclass.json.txt.gz",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/pikpakclass.json$$$https://tvbox.lvhongyuan.site/lib/pikpakclass.json.txt.gz",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "SambaShare",
@@ -224,19 +523,20 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/sambashare.txt"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/sambashare.txt",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "直播转点播",
-      "name": "🐼️┃电视┃直播",
+      "name": "\uD83D\uDC3C️┃电视┃直播",
       "type": 3,
       "searchable": 0,
-      "api": "./lib/live2vod.js",
-      "ext": "./lib/feimaolive.json"
+      "api": "https://tvbox.lvhongyuan.site/lib/live2vod.js",
+      "ext": "https://tvbox.lvhongyuan.site/lib/feimaolive.json"
     },
     {
       "key": "FirstAid",
-      "name": "🚑 急救知识 ",
+      "name": "\uD83D\uDE91 急救知识 ",
       "type": 3,
       "api": "csp_FirstAid",
       "searchable": 0,
@@ -245,14 +545,15 @@
       "style": {
         "type": "rect",
         "ratio": 3.8
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "drpy_js_磁力熊",
       "name": "磁力熊[js]|索引",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./js/cilixiongp.js",
+      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
+      "ext": "https://tvbox.lvhongyuan.site/js/cilixiongp.js",
       "playerType": "1",
       "searchable": 0,
       "quickSearch": 0,
@@ -270,7 +571,8 @@
       "ext": {
         "type": "演唱会#电影#电视剧#帕梅拉#广场舞#纪录片#综艺#鬼畜#音乐#舞蹈#影视#知识#美食#风光#田园#户外#8K#徐云",
         "cookie": ""
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "TGYunPanLocal",
@@ -279,8 +581,8 @@
       "api": "csp_TGYunPanLocal",
       "timeout": 120,
       "ext": {
-        "token": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
-        "json": "./lib/tgsearch.json",
+        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
+        "json": "https://tvbox.lvhongyuan.site/lib/tgsearch.json",
         "keywords": "名称,片名,推荐",
         "tgsearch_url": "http://127.0.0.1:10199",
         "tgsearch_media_url": "http://127.0.0.1:10199",
@@ -291,7 +593,8 @@
       "style": {
         "type": "rect",
         "ratio": 1.77
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "TGYunPan",
@@ -300,8 +603,8 @@
       "api": "csp_TGYunPan",
       "timeout": 120,
       "ext": {
-        "token": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
-        "json": "./lib/tgsearch.json",
+        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
+        "json": "https://tvbox.lvhongyuan.site/lib/tgsearch.json",
         "keywords": "名称,片名,推荐",
         "tgsearch_url": "http://127.0.0.1:10199",
         "tgsearch_media_url": "http://127.0.0.1:10199",
@@ -312,7 +615,8 @@
       "style": {
         "type": "rect",
         "ratio": 1.77
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Wogg",
@@ -323,7 +627,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$./lib/wogg.json$$$WOGG"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$WOGG",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Wobg",
@@ -334,7 +639,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://wobge.run.goorm.io$$$proxy$$$1$$$./lib/wogg.json$$$WOBG"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://wobge.run.goorm.io$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$WOBG",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "yydsys",
@@ -345,7 +651,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://tv.yydsys.top/$$$proxy$$$1$$$./lib/wogg.json$$$WNLG"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tv.yydsys.top/$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$WNLG",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "蜡笔网盘",
@@ -356,7 +663,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://duopan.fun/$$$noproxy$$$1$$$./lib/wogg.json$$$LABI"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://duopan.fun/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$LABI",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Mogg",
@@ -367,7 +675,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$http://mogg.top/$$$noproxy$$$1$$$./lib/wogg.json$$$MOGG"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$http://mogg.top/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$MOGG",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "美剧迷",
@@ -378,7 +687,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 120,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.meijumi.net/$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.meijumi.net/$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Libvio",
@@ -389,7 +699,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.libvio.fun/$$$null"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.libvio.fun/$$$null",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Bt0",
@@ -400,11 +711,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$null$$$noproxy$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$noproxy$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Xpanpan",
@@ -415,11 +727,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://xpanpan.site$$$noproxy$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://xpanpan.site$$$noproxy$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "土豆",
@@ -430,7 +743,8 @@
       "filterable": 0,
       "changeable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://tudou.lvdoui.top/$$$proxy$$$1$$$./lib/wogg.json$$$TUDOU"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tudou.lvdoui.top/$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$TUDOU",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "小米网盘",
@@ -441,7 +755,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://mihdr.top/$$$noproxy$$$1$$$./lib/wogg.json$$$XIAOMI"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://mihdr.top/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$XIAOMI",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Gaoqing",
@@ -452,7 +767,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://gaoqing.la/$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://gaoqing.la/$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Yinfans",
@@ -463,7 +779,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.yinfans.me/$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.yinfans.me/$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "ddys",
@@ -474,7 +791,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://ddys.pro/$$$proxy$$$1$$$"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://ddys.pro/$$$proxy$$$1$$$",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Xinshijue",
@@ -485,7 +803,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://6080z.com/$$$noproxy$$$1$$$./lib/wogg.json"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://6080z.com/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "团长资源",
@@ -496,7 +815,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$noproxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$noproxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "欧乐影院",
@@ -507,7 +827,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$null$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Moli",
@@ -518,7 +839,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.hdmoli.pro/$$$proxy$$$1$$$./lib/moli.json"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.hdmoli.pro/$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/moli.json",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Hdhive",
@@ -529,7 +851,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 120,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://hdhive.online$$$noproxy$$$1$$$./lib/hdhive.txt"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://hdhive.online$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/hdhive.txt",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Ppxzy",
@@ -540,7 +863,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://ppxzy.ink$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://ppxzy.ink$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "校长影视",
@@ -551,7 +875,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://xzyshd.com$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://xzyshd.com$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Bdys_spider",
@@ -561,9 +886,9 @@
       "filterable": 1,
       "searchable": 1,
       "quickSearch": 1,
-      "searchable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.yjys01.com/$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.yjys01.com/$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "YunPan",
@@ -571,7 +896,8 @@
       "type": 3,
       "api": "csp_YunPan",
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$null$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "YingSo",
@@ -579,7 +905,8 @@
       "type": 3,
       "api": "csp_YingSo",
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "混合盘",
@@ -587,11 +914,12 @@
       "type": 3,
       "api": "csp_HunHePan",
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "88Pan",
@@ -599,11 +927,12 @@
       "type": 3,
       "api": "csp_EightEight",
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://662688.xyz$$$",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://662688.xyz$$$",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "PanSearch",
@@ -614,7 +943,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$null$$$proxy"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "盘友圈",
@@ -622,7 +952,8 @@
       "type": 3,
       "api": "csp_Panyq",
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$site$$$proxy"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$site$$$proxy",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "易搜",
@@ -630,11 +961,12 @@
       "type": 3,
       "api": "csp_YiSo",
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/yiso.txt",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/yiso.txt",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "秒搜",
@@ -642,11 +974,12 @@
       "type": 3,
       "api": "csp_MiaoSou",
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Funletu",
@@ -657,11 +990,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "QuarkPanso",
@@ -672,11 +1006,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Panta",
@@ -687,11 +1022,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.91panta.cn/$$$null$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.91panta.cn/$$$null$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "DaPanSo",
@@ -702,7 +1038,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://dapanso.com$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://dapanso.com$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "PikaSo",
@@ -713,11 +1050,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.pikaso.top/$$$null",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.pikaso.top/$$$null",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Qianfan",
@@ -728,7 +1066,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://pan.qianfan.app$$$null$$$./lib/qianfan.txt$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://pan.qianfan.app$$$null$$$https://tvbox.lvhongyuan.site/lib/qianfan.txt$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "YunSo",
@@ -739,11 +1078,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.yunso.net$$$null$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.yunso.net$$$null$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "YunPanOne",
@@ -754,7 +1094,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$null$$$proxy$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "新6V",
@@ -764,7 +1105,8 @@
       "searchable": 1,
       "changeable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$https://www.66ss.org$$$null$$$1"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.66ss.org$$$null$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "賤賤",
@@ -773,8 +1115,9 @@
       "api": "csp_Jianpian",
       "searchable": 1,
       "changeable": 1,
-      "ext": "./lib/jianpian.json$$$1",
-      "timeout": 60
+      "ext": "https://tvbox.lvhongyuan.site/lib/jianpian.json$$$1",
+      "timeout": 60,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "NanGua",
@@ -783,21 +1126,24 @@
       "api": "csp_NanGua",
       "searchable": 1,
       "changeable": 1,
-      "ext": "null$$$1"
+      "ext": "null$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "天天",
       "name": "天天┃App",
       "type": 3,
       "api": "csp_TTian",
-      "ext": "http://op.ysdqjs.cn$$$null$$$1"
+      "ext": "http://op.ysdqjs.cn$$$null$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "追剧",
       "name": "追剧┃App",
       "type": 3,
       "api": "csp_TTian",
-      "ext": "http://app.kzjtv.com$$$null$$$1"
+      "ext": "http://app.kzjtv.com$$$null$$$1",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "黑木耳",
@@ -854,8 +1200,8 @@
       "key": "drpy_js_愛盤搜",
       "name": "爱盘搜[js]|夸",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./js/aipanso.js",
+      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
+      "ext": "https://tvbox.lvhongyuan.site/js/aipanso.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60,
@@ -868,8 +1214,8 @@
       "key": "drpy_js_人人影视",
       "name": "人人影视[js]|搜",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./js/yyets.js",
+      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
+      "ext": "https://tvbox.lvhongyuan.site/js/yyets.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60,
@@ -882,8 +1228,8 @@
       "key": "drpy_js_MP4US",
       "name": "MP4电影[js]|磁",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./js/mp4us.js",
+      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
+      "ext": "https://tvbox.lvhongyuan.site/js/mp4us.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60
@@ -897,11 +1243,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json$$$./lib/4khdr.txt$$$1",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/4khdr.txt$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "UP云搜",
@@ -909,11 +1256,12 @@
       "type": 3,
       "api": "csp_UpYun",
       "timeout": 30,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json",
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
-      }
+      },
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "JustLive",
@@ -921,14 +1269,15 @@
       "type": 3,
       "api": "csp_JustLive",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "drpy_js_酷吧",
       "name": "酷吧[js]|磁",
       "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./js/kuba.js",
+      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
+      "ext": "https://tvbox.lvhongyuan.site/js/kuba.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60
@@ -939,7 +1288,8 @@
       "type": 3,
       "api": "csp_BLSGod",
       "changeable": 1,
-      "timeout": 60
+      "timeout": 60,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Xunlei8",
@@ -947,7 +1297,8 @@
       "type": 3,
       "api": "csp_Xunlei8",
       "changeable": 1,
-      "timeout": 60
+      "timeout": 60,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "SeedHub",
@@ -955,7 +1306,8 @@
       "type": 3,
       "api": "csp_SeedHub",
       "changeable": 1,
-      "timeout": 60
+      "timeout": 60,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "AList",
@@ -965,7 +1317,8 @@
       "searchable": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./js/alistjar.json"
+      "ext": "https://tvbox.lvhongyuan.site/js/alistjar.json",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "快看",
@@ -975,7 +1328,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
-      "filterable": 1
+      "filterable": 1,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Ikanbot",
@@ -986,14 +1340,16 @@
       "quickSearch": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://v.aikanbot.com$$$proxy"
+      "ext": "https://v.aikanbot.com$$$proxy",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "csp_YingShi",
       "name": "影视|海外",
       "type": 3,
       "api": "csp_YingShi",
-      "ext": "proxy"
+      "ext": "proxy",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "星星",
@@ -1002,7 +1358,8 @@
       "api": "csp_Star",
       "searchable": 1,
       "changeable": 0,
-      "ext": "proxy"
+      "ext": "proxy",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "獨播",
@@ -1011,7 +1368,8 @@
       "api": "csp_XPathMacFilter",
       "searchable": 1,
       "changeable": 0,
-      "ext": "./lib/duboku.json$$$proxy"
+      "ext": "https://tvbox.lvhongyuan.site/lib/duboku.json$$$proxy",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "haiwaikan",
@@ -1160,7 +1518,8 @@
       "type": 3,
       "api": "csp_Ying",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "巴士",
@@ -1168,7 +1527,8 @@
       "type": 3,
       "api": "csp_Dm84",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "異界",
@@ -1176,7 +1536,8 @@
       "type": 3,
       "api": "csp_Ysj",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "短剧",
@@ -1185,17 +1546,18 @@
       "api": "csp_Duanju",
       "searchable": 0,
       "changeable": 1,
-      "ext": "https://www.duanjutv.icu"
+      "ext": "https://www.duanjutv.icu",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "drpy_js_Alist",
       "name": "网盘 | Alist[js]",
       "type": 3,
-      "api": "./lib/alist.min.js",
+      "api": "https://tvbox.lvhongyuan.site/lib/alist.min.js",
       "searchable": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "./js/alist.json"
+      "ext": "https://tvbox.lvhongyuan.site/js/alist.json"
     },
     {
       "key": "MV_vod",
@@ -1212,7 +1574,8 @@
       "type": 3,
       "api": "csp_Kugou",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Iktv",
@@ -1220,7 +1583,8 @@
       "type": 3,
       "api": "csp_Iktv",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "Yinyuetai",
@@ -1228,7 +1592,8 @@
       "type": 3,
       "api": "csp_Yinyuetai",
       "searchable": 1,
-      "changeable": 0
+      "changeable": 0,
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "push_agent",
@@ -1237,7 +1602,8 @@
       "api": "csp_Push",
       "changeable": 0,
       "timeout": 30,
-      "ext": "https://v2vv.github.io/tvbox-sub/lib/tokenm.json"
+      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     },
     {
       "key": "應用商店",
@@ -1246,271 +1612,8 @@
       "api": "csp_Market",
       "searchable": 0,
       "changeable": 0,
-      "ext": "https://fm.t4tv.hz.cz/json/market.json"
-    }
-  ],
-  "lives": [
-    {
-      "name": "肥羊国内直播",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/tv.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "肥羊TPTV",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/tptv.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "肥羊B站直播",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/bililive.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "肥羊虎牙一起看",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/huyayqk.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "肥羊斗鱼一起看",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/douyuyqk.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "肥羊YY轮播",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://127.0.0.1:35455/yylunbo.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "Gather.电视直播",
-      "type": 0,
-      "url": "https://tv.iill.top/m3u/Gather",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "Gather.网络直播",
-      "type": 0,
-      "url": "https://tv.iill.top/m3u/Live",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "Gather.MyTV",
-      "type": 0,
-      "url": "https://tv.iill.top/m3u/MyTV",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.4GTV",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/4gtv.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.BeeSport",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/beesport.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.TheTV",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/thetv.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.DLHD",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/dlhd.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.ITV",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/itv_proxy.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.TPTV",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/null/http://192.168.101.2:5050/tptv.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.MyTVSuper",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/mytvsuper.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "PixMan.Hami",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/p/0/proxy/http://192.168.101.2:5050/hami.m3u",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "zouming.ipv6",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/proxy/http://ww.zouming.com/ipv6.txt",
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "live.ipv6",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/proxy/https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/ipv6.m3u",
-
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "live.ipv6.m3u",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/c/3600/proxy/https://live.fanmingming.com/tv/m3u/ipv6.m3u",
-
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "live.ipv6.local",
-      "type": 0,
-      "url": "./lib/live.ipv6.txt",
-
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "live.fan",
-      "type": 0,
-      "url": "http://127.0.0.1:10079/p/0/proxy/https://raw.githubusercontent.com/dxawi/0/main/tvlive.txt",
-
-      "ua": "okhttp/3.15",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "YTLive",
-      "type": 0,
-
-      "url": "./lib/yo21.txt"
-    },
-    {
-      "name": "直播",
-      "type": 0,
-
-      "url": "https://agit.ai/Yoursmile7/TVBox/raw/branch/master/live.txt",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "TXT",
-      "type": 0,
-
-      "url": "http://home.jundie.top:81/Cat/tv/live.txt",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-    },
-    {
-      "name": "Json",
-      "type": 1,
-
-      "url": "http://127.0.0.1:10079/p/0/proxy/https://raw.githubusercontent.com/FongMi/CatVodSpider/main/json/live.json",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png",
-      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-    },
-    {
-      "name": "live.feimao",
-      "type": 0,
-
-      "url": "http://127.0.0.1:10079/p/0/proxy/http://我不是.肥猫.live/TV/tvzb.txt",
-      "ua": "okhttp/3.12.13",
-      "epg": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/?ch={name}&date={date}",
-      "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "group": "redirect",
-      "channels": [
-        {
-          "name": "redirect",
-          "urls": ["proxy://do=live&type=live&proxy=&url="]
-        }
-      ]
-    }
-  ],
-  "doh": [
-    {
-      "name": "Google",
-      "url": "https://dns.google/dns-query",
-      "ips": ["8.8.4.4", "8.8.8.8"]
-    },
-    {
-      "name": "Cloudflare",
-      "url": "https://cloudflare-dns.com/dns-query",
-      "ips": [
-        "1.1.1.1",
-        "1.0.0.1",
-        "2606:4700:4700::1111",
-        "2606:4700:4700::1001"
-      ]
-    },
-    {
-      "name": "AdGuard",
-      "url": "https://dns.adguard.com/dns-query",
-      "ips": ["94.140.14.140", "94.140.14.141"]
-    },
-    {
-      "name": "DNSWatch",
-      "url": "https://resolver2.dns.watch/dns-query",
-      "ips": ["84.200.69.80", "84.200.70.40"]
-    },
-    {
-      "name": "Quad9",
-      "url": "https://dns.quad9.net/dns-quer",
-      "ips": ["9.9.9.9", "149.112.112.112"]
+      "ext": "https://fm.t4tv.hz.cz/json/market.json",
+      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
     }
   ],
   "rules": [
@@ -1534,7 +1637,10 @@
         ".*ulivetv.*"
       ]
     },
-    { "host": "www.djuu.com", "rule": ["mp4.djuu.com", "m4a"] },
+    {
+      "host": "www.djuu.com",
+      "rule": ["mp4.djuu.com", "m4a"]
+    },
     {
       "host": "www.sharenice.net",
       "rule": ["huoshan.com", "/item/video/"],
@@ -1545,19 +1651,28 @@
       "rule": ["sovv.qianpailive.com", "vid="],
       "filter": []
     },
-    { "host": "www.sharenice.net", "rule": ["douyin.com", "/play/"] },
+    {
+      "host": "www.sharenice.net",
+      "rule": ["douyin.com", "/play/"]
+    },
     {
       "host": "m.ysxs8.vip",
       "rule": ["ysting.ysxs8.vip:81", "xmcdn.com"],
       "filter": []
     },
-    { "host": "hdmoli.com", "rule": [".m3u8"] },
+    {
+      "host": "hdmoli.com",
+      "rule": [".m3u8"]
+    },
     {
       "host": "https://api.live.bilibili.com",
       "rule": ["bilivideo.com", "/index.m3u8"],
       "filter": ["data.bilibili.com/log/web", "i0.hdslb.com/bfs/live/"]
     },
-    { "host": "www.agemys.cc", "rule": ["cdn-tos", "obj/tos-cn"] },
+    {
+      "host": "www.agemys.cc",
+      "rule": ["cdn-tos", "obj/tos-cn"]
+    },
     {
       "host": "www.fun4k.com",
       "rule": ["https://hd.ijycnd.com/play", "index.m3u8"]
@@ -1619,18 +1734,38 @@
     }
   ],
   "parses": [],
-  "flags": [
-    "youku",
-    "qq",
-    "iqiyi",
-    "qiyi",
-    "letv",
-    "sohu",
-    "tudou",
-    "pptv",
-    "mgtv",
-    "wasu"
+  "doh": [
+    {
+      "name": "Google",
+      "url": "https://dns.google/dns-query",
+      "ips": ["8.8.4.4", "8.8.8.8"]
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query",
+      "ips": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ]
+    },
+    {
+      "name": "AdGuard",
+      "url": "https://dns.adguard.com/dns-query",
+      "ips": ["94.140.14.140", "94.140.14.141"]
+    },
+    {
+      "name": "DNSWatch",
+      "url": "https://resolver2.dns.watch/dns-query",
+      "ips": ["84.200.69.80", "84.200.70.40"]
+    },
+    {
+      "name": "Quad9",
+      "url": "https://dns.quad9.net/dns-quer",
+      "ips": ["9.9.9.9", "149.112.112.112"]
+    }
   ],
-  "wallpaper": "http://饭太硬.top/深色壁纸/api.php",
-  "disabled_wallpaper": "http://www.kf666888.cn/api/tvbox/img"
+  "disabled_wallpaper": "http://www.kf666888.cn/api/tvbox/img",
+  "spider": "https://tvbox.lvhongyuan.site/pg.jar"
 }
