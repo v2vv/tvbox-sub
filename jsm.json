@@ -163,7 +163,7 @@
     {
       "name": "live.ipv6.local",
       "type": 0,
-      "url": "https://tvbox.lvhongyuan.site/lib/live.ipv6.txt",
+      "url": "https://tvbox-sub.vercel.app/lib/live.ipv6.txt",
       "ua": "okhttp/3.15",
       "epg": "http://127.0.0.1:10079/p/0/proxy/http://epg.112114.xyz/?ch={name}&date={date}",
       "logo": "http://127.0.0.1:10079/p/0/proxy/https://epg.112114.xyz/logo/{name}.png"
@@ -179,7 +179,7 @@
     {
       "name": "YTLive",
       "type": 0,
-      "url": "https://tvbox.lvhongyuan.site/lib/yo21.txt"
+      "url": "https://tvbox-sub.vercel.app/lib/yo21.txt"
     },
     {
       "name": "直播",
@@ -289,8 +289,8 @@
       "searchable": 0,
       "changeable": 1,
       "indexs": 1,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/douban.json",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/douban.json",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "TGDouban",
@@ -299,21 +299,21 @@
       "api": "csp_TGDouban",
       "timeout": 120,
       "ext": {
-        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
-        "json": "https://tvbox.lvhongyuan.site/lib/tgsearch.json",
+        "token": "https://tvbox-sub.vercel.app/lib/tokenm",
+        "json": "https://tvbox-sub.vercel.app/lib/tgsearch.json",
         "keywords": "名称,片名,推荐",
         "tgsearch_url": "http://127.0.0.1:10199",
         "tgsearch_media_url": "http://127.0.0.1:10199",
         "channellist": "alypzyhzq|1000,Mbox115|1000,shares_115|1000,Quark_Share_Channel|1000,Aliyundrive_Share_Channel|1000,wanwansubchat|1000",
         "proxy": "noproxy",
-        "douban": "https://tvbox.lvhongyuan.site/lib/douban.json",
+        "douban": "https://tvbox-sub.vercel.app/lib/douban.json",
         "danmu": true
       },
       "style": {
         "type": "rect",
         "ratio": 0.7
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Youtube",
@@ -325,8 +325,8 @@
       "changeable": 0,
       "timeout": 120,
       "ext": {
-        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
-        "json": "https://tvbox.lvhongyuan.site/lib/youtube.json",
+        "token": "https://tvbox-sub.vercel.app/lib/tokenm",
+        "json": "https://tvbox-sub.vercel.app/lib/youtube.json",
         "type": "直播#新闻#剧集#电影#综艺#纪录片#音乐#体育#动物#风光#放松#4K#HDR#movie#music#documentary#bbc documentary#national geographic documentary",
         "keywords": "排行榜,HOT,TRENDS,热门话题,热门趋势,热门综艺,热门电影,热门电视剧,小姐姐",
         "codecs": "",
@@ -337,7 +337,7 @@
         "type": "rect",
         "ratio": 1.77
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "网盘配置",
@@ -346,19 +346,19 @@
       "api": "csp_Config",
       "searchable": 0,
       "changeable": 0,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
       "style": {
         "type": "rect",
         "ratio": 1.5
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Local",
       "name": "本地",
       "type": 3,
       "api": "csp_Local",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "PushShare",
@@ -370,12 +370,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/pushshare.txt$$$db$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/pushshare.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "AlistShare",
@@ -387,12 +387,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 120,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$null$$$proxy$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "AliShare",
@@ -404,12 +404,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/alishare.txt$$$db$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/alishare.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "AliShareEBook",
@@ -421,12 +421,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/alishare.ebook.txt$$$db$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/alishare.ebook.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "QuarkShare",
@@ -438,12 +438,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/quarkshare.txt",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/quarkshare.txt",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "115Share",
@@ -455,12 +455,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 120,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/115share.txt$$$db$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/115share.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "UCShare",
@@ -472,12 +472,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/ucshare.txt$$$db$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/ucshare.txt$$$db$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "ThunderShare",
@@ -489,12 +489,12 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/thundershare.txt",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/thundershare.txt",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "PikPakShare",
@@ -506,12 +506,12 @@
       "changeable": 1,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/pikpakclass.json$$$https://tvbox.lvhongyuan.site/lib/pikpakclass.json.txt.gz",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/pikpakclass.json$$$https://tvbox-sub.vercel.app/lib/pikpakclass.json.txt.gz",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "SambaShare",
@@ -523,16 +523,16 @@
       "changeable": 0,
       "filterable": 0,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/sambashare.txt",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/sambashare.txt",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "直播转点播",
       "name": "\uD83D\uDC3C️┃电视┃直播",
       "type": 3,
       "searchable": 0,
-      "api": "https://tvbox.lvhongyuan.site/lib/live2vod.js",
-      "ext": "https://tvbox.lvhongyuan.site/lib/feimaolive.json"
+      "api": "https://tvbox-sub.vercel.app/lib/live2vod.js",
+      "ext": "https://tvbox-sub.vercel.app/lib/feimaolive.json"
     },
     {
       "key": "FirstAid",
@@ -546,14 +546,14 @@
         "type": "rect",
         "ratio": 3.8
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "drpy_js_磁力熊",
       "name": "磁力熊[js]|索引",
       "type": 3,
-      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
-      "ext": "https://tvbox.lvhongyuan.site/js/cilixiongp.js",
+      "api": "https://tvbox-sub.vercel.app/lib/drpy2.min.js",
+      "ext": "https://tvbox-sub.vercel.app/js/cilixiongp.js",
       "playerType": "1",
       "searchable": 0,
       "quickSearch": 0,
@@ -572,7 +572,7 @@
         "type": "演唱会#电影#电视剧#帕梅拉#广场舞#纪录片#综艺#鬼畜#音乐#舞蹈#影视#知识#美食#风光#田园#户外#8K#徐云",
         "cookie": ""
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "TGYunPanLocal",
@@ -581,8 +581,8 @@
       "api": "csp_TGYunPanLocal",
       "timeout": 120,
       "ext": {
-        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
-        "json": "https://tvbox.lvhongyuan.site/lib/tgsearch.json",
+        "token": "https://tvbox-sub.vercel.app/lib/tokenm",
+        "json": "https://tvbox-sub.vercel.app/lib/tgsearch.json",
         "keywords": "名称,片名,推荐",
         "tgsearch_url": "http://127.0.0.1:10199",
         "tgsearch_media_url": "http://127.0.0.1:10199",
@@ -594,7 +594,7 @@
         "type": "rect",
         "ratio": 1.77
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "TGYunPan",
@@ -603,8 +603,8 @@
       "api": "csp_TGYunPan",
       "timeout": 120,
       "ext": {
-        "token": "https://tvbox.lvhongyuan.site/lib/tokenm",
-        "json": "https://tvbox.lvhongyuan.site/lib/tgsearch.json",
+        "token": "https://tvbox-sub.vercel.app/lib/tokenm",
+        "json": "https://tvbox-sub.vercel.app/lib/tgsearch.json",
         "keywords": "名称,片名,推荐",
         "tgsearch_url": "http://127.0.0.1:10199",
         "tgsearch_media_url": "http://127.0.0.1:10199",
@@ -616,7 +616,7 @@
         "type": "rect",
         "ratio": 1.77
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Wogg",
@@ -627,8 +627,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$WOGG",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://wogg.888484.xyz/$$$noproxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json$$$WOGG",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Wobg",
@@ -639,8 +639,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://wobge.run.goorm.io$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$WOBG",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://wobge.run.goorm.io$$$proxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json$$$WOBG",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "yydsys",
@@ -651,8 +651,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tv.yydsys.top/$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$WNLG",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tv.yydsys.top/$$$proxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json$$$WNLG",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "蜡笔网盘",
@@ -663,8 +663,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://duopan.fun/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$LABI",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://duopan.fun/$$$noproxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json$$$LABI",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Mogg",
@@ -675,8 +675,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$http://mogg.top/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$MOGG",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$http://mogg.top/$$$noproxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json$$$MOGG",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "美剧迷",
@@ -687,8 +687,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 120,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.meijumi.net/$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.meijumi.net/$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Libvio",
@@ -699,8 +699,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.libvio.fun/$$$null",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.libvio.fun/$$$null",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Bt0",
@@ -711,12 +711,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$noproxy$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$null$$$noproxy$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Xpanpan",
@@ -727,12 +727,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://xpanpan.site$$$noproxy$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://xpanpan.site$$$noproxy$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "土豆",
@@ -743,8 +743,8 @@
       "filterable": 0,
       "changeable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tudou.lvdoui.top/$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$TUDOU",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tudou.lvdoui.top/$$$proxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json$$$TUDOU",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "小米网盘",
@@ -755,8 +755,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://mihdr.top/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json$$$XIAOMI",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://mihdr.top/$$$noproxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json$$$XIAOMI",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Gaoqing",
@@ -767,8 +767,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://gaoqing.la/$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://gaoqing.la/$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Yinfans",
@@ -779,8 +779,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.yinfans.me/$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.yinfans.me/$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "ddys",
@@ -791,8 +791,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://ddys.pro/$$$proxy$$$1$$$",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://ddys.pro/$$$proxy$$$1$$$",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Xinshijue",
@@ -803,8 +803,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://6080z.com/$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/wogg.json",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://6080z.com/$$$noproxy$$$1$$$https://tvbox-sub.vercel.app/lib/wogg.json",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "团长资源",
@@ -815,8 +815,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$noproxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$noproxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "欧乐影院",
@@ -827,8 +827,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$null$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Moli",
@@ -839,8 +839,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.hdmoli.pro/$$$proxy$$$1$$$https://tvbox.lvhongyuan.site/lib/moli.json",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.hdmoli.pro/$$$proxy$$$1$$$https://tvbox-sub.vercel.app/lib/moli.json",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Hdhive",
@@ -851,8 +851,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 120,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://hdhive.online$$$noproxy$$$1$$$https://tvbox.lvhongyuan.site/lib/hdhive.txt",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://hdhive.online$$$noproxy$$$1$$$https://tvbox-sub.vercel.app/lib/hdhive.txt",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Ppxzy",
@@ -863,8 +863,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://ppxzy.ink$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://ppxzy.ink$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "校长影视",
@@ -875,8 +875,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://xzyshd.com$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://xzyshd.com$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Bdys_spider",
@@ -887,8 +887,8 @@
       "searchable": 1,
       "quickSearch": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.yjys01.com/$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.yjys01.com/$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "YunPan",
@@ -896,8 +896,8 @@
       "type": 3,
       "api": "csp_YunPan",
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$null$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "YingSo",
@@ -905,8 +905,8 @@
       "type": 3,
       "api": "csp_YingSo",
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "混合盘",
@@ -914,12 +914,12 @@
       "type": 3,
       "api": "csp_HunHePan",
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "88Pan",
@@ -927,12 +927,12 @@
       "type": 3,
       "api": "csp_EightEight",
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://662688.xyz$$$",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://662688.xyz$$$",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "PanSearch",
@@ -943,8 +943,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$null$$$proxy",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "盘友圈",
@@ -952,8 +952,8 @@
       "type": 3,
       "api": "csp_Panyq",
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$site$$$proxy",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$site$$$proxy",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "易搜",
@@ -961,12 +961,12 @@
       "type": 3,
       "api": "csp_YiSo",
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/yiso.txt",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/yiso.txt",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "秒搜",
@@ -974,12 +974,12 @@
       "type": 3,
       "api": "csp_MiaoSou",
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Funletu",
@@ -990,12 +990,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "QuarkPanso",
@@ -1006,12 +1006,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Panta",
@@ -1022,12 +1022,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.91panta.cn/$$$null$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.91panta.cn/$$$null$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "DaPanSo",
@@ -1038,8 +1038,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://dapanso.com$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://dapanso.com$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "PikaSo",
@@ -1050,12 +1050,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.pikaso.top/$$$null",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.pikaso.top/$$$null",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Qianfan",
@@ -1066,8 +1066,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://pan.qianfan.app$$$null$$$https://tvbox.lvhongyuan.site/lib/qianfan.txt$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://pan.qianfan.app$$$null$$$https://tvbox-sub.vercel.app/lib/qianfan.txt$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "YunSo",
@@ -1078,12 +1078,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.yunso.net$$$null$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.yunso.net$$$null$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "YunPanOne",
@@ -1094,8 +1094,8 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$null$$$proxy$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$null$$$proxy$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "新6V",
@@ -1105,8 +1105,8 @@
       "searchable": 1,
       "changeable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://www.66ss.org$$$null$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://www.66ss.org$$$null$$$1",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "賤賤",
@@ -1115,9 +1115,9 @@
       "api": "csp_Jianpian",
       "searchable": 1,
       "changeable": 1,
-      "ext": "https://tvbox.lvhongyuan.site/lib/jianpian.json$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/jianpian.json$$$1",
       "timeout": 60,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "NanGua",
@@ -1127,7 +1127,7 @@
       "searchable": 1,
       "changeable": 1,
       "ext": "null$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "天天",
@@ -1135,7 +1135,7 @@
       "type": 3,
       "api": "csp_TTian",
       "ext": "http://op.ysdqjs.cn$$$null$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "追剧",
@@ -1143,7 +1143,7 @@
       "type": 3,
       "api": "csp_TTian",
       "ext": "http://app.kzjtv.com$$$null$$$1",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "黑木耳",
@@ -1200,8 +1200,8 @@
       "key": "drpy_js_愛盤搜",
       "name": "爱盘搜[js]|夸",
       "type": 3,
-      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
-      "ext": "https://tvbox.lvhongyuan.site/js/aipanso.js",
+      "api": "https://tvbox-sub.vercel.app/lib/drpy2.min.js",
+      "ext": "https://tvbox-sub.vercel.app/js/aipanso.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60,
@@ -1214,8 +1214,8 @@
       "key": "drpy_js_人人影视",
       "name": "人人影视[js]|搜",
       "type": 3,
-      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
-      "ext": "https://tvbox.lvhongyuan.site/js/yyets.js",
+      "api": "https://tvbox-sub.vercel.app/lib/drpy2.min.js",
+      "ext": "https://tvbox-sub.vercel.app/js/yyets.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60,
@@ -1228,8 +1228,8 @@
       "key": "drpy_js_MP4US",
       "name": "MP4电影[js]|磁",
       "type": 3,
-      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
-      "ext": "https://tvbox.lvhongyuan.site/js/mp4us.js",
+      "api": "https://tvbox-sub.vercel.app/lib/drpy2.min.js",
+      "ext": "https://tvbox-sub.vercel.app/js/mp4us.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60
@@ -1243,12 +1243,12 @@
       "changeable": 1,
       "filterable": 1,
       "timeout": 60,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm$$$https://tvbox.lvhongyuan.site/lib/4khdr.txt$$$1",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm$$$https://tvbox-sub.vercel.app/lib/4khdr.txt$$$1",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "UP云搜",
@@ -1256,12 +1256,12 @@
       "type": 3,
       "api": "csp_UpYun",
       "timeout": 30,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
       "style": {
         "type": "list",
         "ratio": 1.1
       },
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "JustLive",
@@ -1270,14 +1270,14 @@
       "api": "csp_JustLive",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "drpy_js_酷吧",
       "name": "酷吧[js]|磁",
       "type": 3,
-      "api": "https://tvbox.lvhongyuan.site/lib/drpy2.min.js",
-      "ext": "https://tvbox.lvhongyuan.site/js/kuba.js",
+      "api": "https://tvbox-sub.vercel.app/lib/drpy2.min.js",
+      "ext": "https://tvbox-sub.vercel.app/js/kuba.js",
       "quickSearch": 1,
       "changeable": 1,
       "timeout": 60
@@ -1289,7 +1289,7 @@
       "api": "csp_BLSGod",
       "changeable": 1,
       "timeout": 60,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Xunlei8",
@@ -1298,7 +1298,7 @@
       "api": "csp_Xunlei8",
       "changeable": 1,
       "timeout": 60,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "SeedHub",
@@ -1307,7 +1307,7 @@
       "api": "csp_SeedHub",
       "changeable": 1,
       "timeout": 60,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "AList",
@@ -1317,8 +1317,8 @@
       "searchable": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://tvbox.lvhongyuan.site/js/alistjar.json",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/js/alistjar.json",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "快看",
@@ -1329,7 +1329,7 @@
       "quickSearch": 1,
       "changeable": 0,
       "filterable": 1,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Ikanbot",
@@ -1341,7 +1341,7 @@
       "filterable": 1,
       "changeable": 1,
       "ext": "https://v.aikanbot.com$$$proxy",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "csp_YingShi",
@@ -1349,7 +1349,7 @@
       "type": 3,
       "api": "csp_YingShi",
       "ext": "proxy",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "星星",
@@ -1359,7 +1359,7 @@
       "searchable": 1,
       "changeable": 0,
       "ext": "proxy",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "獨播",
@@ -1368,8 +1368,8 @@
       "api": "csp_XPathMacFilter",
       "searchable": 1,
       "changeable": 0,
-      "ext": "https://tvbox.lvhongyuan.site/lib/duboku.json$$$proxy",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/duboku.json$$$proxy",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "haiwaikan",
@@ -1519,7 +1519,7 @@
       "api": "csp_Ying",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "巴士",
@@ -1528,7 +1528,7 @@
       "api": "csp_Dm84",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "異界",
@@ -1537,7 +1537,7 @@
       "api": "csp_Ysj",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "短剧",
@@ -1547,17 +1547,17 @@
       "searchable": 0,
       "changeable": 1,
       "ext": "https://www.duanjutv.icu",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "drpy_js_Alist",
       "name": "网盘 | Alist[js]",
       "type": 3,
-      "api": "https://tvbox.lvhongyuan.site/lib/alist.min.js",
+      "api": "https://tvbox-sub.vercel.app/lib/alist.min.js",
       "searchable": 1,
       "filterable": 1,
       "changeable": 1,
-      "ext": "https://tvbox.lvhongyuan.site/js/alist.json"
+      "ext": "https://tvbox-sub.vercel.app/js/alist.json"
     },
     {
       "key": "MV_vod",
@@ -1575,7 +1575,7 @@
       "api": "csp_Kugou",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Iktv",
@@ -1584,7 +1584,7 @@
       "api": "csp_Iktv",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "Yinyuetai",
@@ -1593,7 +1593,7 @@
       "api": "csp_Yinyuetai",
       "searchable": 1,
       "changeable": 0,
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "push_agent",
@@ -1602,8 +1602,8 @@
       "api": "csp_Push",
       "changeable": 0,
       "timeout": 30,
-      "ext": "https://tvbox.lvhongyuan.site/lib/tokenm",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "ext": "https://tvbox-sub.vercel.app/lib/tokenm",
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     },
     {
       "key": "應用商店",
@@ -1613,7 +1613,7 @@
       "searchable": 0,
       "changeable": 0,
       "ext": "https://fm.t4tv.hz.cz/json/market.json",
-      "jar": "https://tvbox.lvhongyuan.site/pg.jar"
+      "jar": "https://tvbox-sub.vercel.app/pg.jar"
     }
   ],
   "rules": [
@@ -1767,5 +1767,5 @@
     }
   ],
   "disabled_wallpaper": "http://www.kf666888.cn/api/tvbox/img",
-  "spider": "https://tvbox.lvhongyuan.site/pg.jar"
+  "spider": "https://tvbox-sub.vercel.app/pg.jar"
 }
