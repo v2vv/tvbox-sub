@@ -14,3 +14,4 @@ npm install wrangler -g
 ## 本地开发
 Cloudflare wrangler pages 本地开发调试命令
 wrangler pages dev 
+wrangler pages dev --remote

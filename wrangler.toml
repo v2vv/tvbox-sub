@@ -1,3 +1,7 @@
 name = "tvbox-sub"
 pages_build_output_dir = "./dist"
 compatibility_date = "2024-11-16"
+
+kv_namespaces = [
+  { binding = "TVBOX", id = "eb0fd6580e6f46f1950d66a314e0d4c5" }
+]
