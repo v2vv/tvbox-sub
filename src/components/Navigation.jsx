@@ -1,15 +1,29 @@
-import React, { useState } from 'react';
-import NetworkDriveTable from './NetworkDriveTable';
-import Config from './Config';
+import React, { useState } from "react";
+import NetworkDriveTable from "./NetworkDriveTable";
+import Config from "./Config";
 
 const NavigationBar = () => {
-  const [currentView, setCurrentView] = useState('home');
+  const [currentView, setCurrentView] = useState("home");
+
+  const workertest = () => {
+    fetch("https://tvbox-sub.pages.dev", {
+      method: "GET", // 默认就是 GET 方法, 可以省略
+    })
+      .then((response) => response.json()) // 假设返回的是 JSON 数据
+      .then((data) => {
+        console.log(data); // 打印响应数据
+      })
+      .catch((error) => {
+        console.error("Error:", error); // 捕获并处理错误
+      });
+  };
 
   const renderContent = () => {
     switch (currentView) {
-      case 'account':
+      case "account":
+        workertest();
         return <NetworkDriveTable />;
-      case 'config':
+      case "config":
         return <Config />;
       default:
         return null;
@@ -23,45 +37,59 @@ const NavigationBar = () => {
           <div className="flex items-center justify-between h-14">
             {/* Left side navigation items */}
             <div className="flex items-center space-x-8">
-              <button 
-                onClick={() => setCurrentView('home')}
-                className={`text-gray-600 hover:text-blue-500 ${currentView === 'home' ? 'text-blue-500' : ''}`}
+              <button
+                onClick={() => setCurrentView("home")}
+                className={`text-gray-600 hover:text-blue-500 ${
+                  currentView === "home" ? "text-blue-500" : ""
+                }`}
               >
                 首页
               </button>
-              <button 
-                onClick={() => setCurrentView('site')}
-                className={`text-gray-600 hover:text-blue-500 ${currentView === 'site' ? 'text-blue-500' : ''}`}
+              <button
+                onClick={() => setCurrentView("site")}
+                className={`text-gray-600 hover:text-blue-500 ${
+                  currentView === "site" ? "text-blue-500" : ""
+                }`}
               >
                 站点
               </button>
-              <button 
-                onClick={() => setCurrentView('account')}
-                className={`text-gray-600 hover:text-blue-500 ${currentView === 'account' ? 'text-blue-500' : ''}`}
+              <button
+                onClick={() => setCurrentView("account")}
+                className={`text-gray-600 hover:text-blue-500 ${
+                  currentView === "account" ? "text-blue-500" : ""
+                }`}
               >
                 账号
               </button>
-              <button 
-                onClick={() => setCurrentView('subscribe')}
-                className={`text-gray-600 hover:text-blue-500 ${currentView === 'subscribe' ? 'text-blue-500' : ''}`}
+              <button
+                onClick={() => setCurrentView("subscribe")}
+                className={`text-gray-600 hover:text-blue-500 ${
+                  currentView === "subscribe" ? "text-blue-500" : ""
+                }`}
               >
                 订阅
               </button>
-              <button 
-                onClick={() => setCurrentView('config')}
-                className={`text-gray-600 hover:text-blue-500 ${currentView === 'config' ? 'text-blue-500' : ''}`}
+              <button
+                onClick={() => setCurrentView("config")}
+                className={`text-gray-600 hover:text-blue-500 ${
+                  currentView === "config" ? "text-blue-500" : ""
+                }`}
               >
                 配置
               </button>
-              <button 
-                onClick={() => setCurrentView('log')}
-                className={`text-gray-600 hover:text-blue-500 ${currentView === 'log' ? 'text-blue-500' : ''}`}
+              <button
+                onClick={() => setCurrentView("log")}
+                className={`text-gray-600 hover:text-blue-500 ${
+                  currentView === "log" ? "text-blue-500" : ""
+                }`}
               >
                 日志
               </button>
-              <button 
-                onClick={() => setCurrentView('about')}
-                className={`text-gray-600 hover:text-blue-500 ${currentView === 'about' ? 'text-blue-500' : ''}`}
+              <button
+                onClick={() => setCurrentView("about")}
+                className={`text-gray-600 hover:text-blue-500 ${
+                  currentView === "about" ? "text-blue-500" : ""
+                }`}
               >
                 关于
               </button>
@@ -82,8 +110,18 @@ const NavigationBar = () => {
             <div className="relative">
               <button className="flex items-center space-x-1 text-gray-600 hover:text-blue-500">
                 <span>admin</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                <svg
+                  className="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               </button>
             </div>
@@ -92,9 +130,7 @@ const NavigationBar = () => {
       </div>
 
       {/* Content Area */}
-      <div className="flex-1 bg-gray-50">
-        {renderContent()}
-      </div>
+      <div className="flex-1 bg-gray-50">{renderContent()}</div>
     </div>
   );
 };

@@ -1,15 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Save } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Save } from "lucide-react";
 
 const ConfigPage = () => {
-  const [config, setConfig] = useState({
-    token: '',
+  const [configCloudflareAccountId, setCloudflareAccountId] = useState({
+    id: "",
   });
-  const [saveStatus, setSaveStatus] = useState('');
+
+  const [config, setConfig] = useState({
+    token: "",
+  });
+
+  const [saveStatus, setSaveStatus] = useState("");
 
   // 从本地存储加载配置
   useEffect(() => {
-    const loadedConfig = localStorage.getItem('cloudflareToken');
+    const loadedConfigCloudflareAccountId = localStorage.getItem(
+      "cloudflareAccountId"
+    );
+    if (loadedConfigCloudflareAccountId) {
+      setConfig(JSON.parse(loadedConfigCloudflareAccountId));
+    }
+
+    const loadedConfig = localStorage.getItem("cloudflareToken");
     if (loadedConfig) {
       setConfig(JSON.parse(loadedConfig));
     }
@@ -17,18 +29,24 @@ const ConfigPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     try {
-      localStorage.setItem('cloudflareToken', JSON.stringify(config));
-      setSaveStatus('success');
-      
+      localStorage.setItem(
+        "cloudflareAccountId",
+        JSON.stringify(configCloudflareAccountId)
+      );
+      setSaveStatus("success");
+
+      localStorage.setItem("cloudflareToken", JSON.stringify(config));
+      setSaveStatus("success");
+
       // 3秒后清除状态消息
       setTimeout(() => {
-        setSaveStatus('');
+        setSaveStatus("");
       }, 3000);
     } catch (error) {
-      console.error('Error saving config:', error);
-      setSaveStatus('error');
+      console.error("Error saving config:", error);
+      setSaveStatus("error");
     }
   };
 
@@ -42,15 +60,39 @@ const ConfigPage = () => {
       <div className="bg-white rounded-lg shadow p-6">
         <form onSubmit={handleSubmit}>
           <div className="space-y-6">
-            {/* Token 配置 */}
+            {/* CloudflareAccountId 配置 */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                API Token
+                Cloudflare Account Id
+              </label>
+              <input
+                type="text"
+                value={configCloudflareAccountId.id}
+                onChange={(e) =>
+                  setCloudflareAccountId({
+                    ...configCloudflareAccountId,
+                    id: e.target.value,
+                  })
+                }
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="请输入 Cloudflare AccountId"
+              />
+              <p className="mt-1 text-sm text-gray-500">
+                用于 Cloudflare AccountId
+              </p>
+            </div>
+
+            {/* Cloudflare Token 配置 */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Cloudflare API Token
               </label>
               <input
                 type="password"
                 value={config.token}
-                onChange={(e) => setConfig({ ...config, token: e.target.value })}
+                onChange={(e) =>
+                  setConfig({ ...config, token: e.target.value })
+                }
                 className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 placeholder="请输入 API Token"
               />
@@ -62,10 +104,10 @@ const ConfigPage = () => {
             {/* 保存按钮和状态提示 */}
             <div className="flex items-center justify-between pt-4 border-t">
               <div>
-                {saveStatus === 'success' && (
+                {saveStatus === "success" && (
                   <span className="text-green-600 text-sm">配置已保存</span>
                 )}
-                {saveStatus === 'error' && (
+                {saveStatus === "error" && (
                   <span className="text-red-600 text-sm">保存失败，请重试</span>
                 )}
               </div>

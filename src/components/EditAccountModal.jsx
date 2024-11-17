@@ -1,73 +1,83 @@
-import React, { useEffect, useState } from 'react';
-import { X } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { X } from "lucide-react";
 
 const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
-
-  const cloudFlareToken = localStorage.getItem('cloudflareToken');
+  const cloudFlareToken = localStorage.getItem("cloudflareToken");
+  const cloudFlareAccountId = localStorage.getItem("cloudflareAccountId");
 
   const [formData, setFormData] = useState({
-    name: '',
-    type: '夸克网盘',
-    cookie: '',
-    fileId: '',
-    isMain: false
+    name: "",
+    type: "夸克网盘",
+    cookie: "",
+    fileId: "",
+    isMain: false,
   });
 
   useEffect(() => {
     if (account) {
       setFormData({
-        name: account.name || '',
-        type: account.type || '夸克网盘',
-        cookie: account.cookie || '',
-        fileId: account.fileId || '',
-        isMain: account.isMain || false
+        name: account.name || "",
+        type: account.type || "夸克网盘",
+        cookie: account.cookie || "",
+        fileId: account.fileId || "",
+        isMain: account.isMain || false,
       });
     } else {
       setFormData({
-        name: '',
-        type: '夸克网盘',
-        cookie: '',
-        fileId: '',
-        isMain: false
+        name: "",
+        type: "夸克网盘",
+        cookie: "",
+        fileId: "",
+        isMain: false,
       });
     }
   }, [account]);
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  
-  // Prepare the form data and the payload
-  const payload = { 
-    ...formData, 
-    id: account?.id,
-    path: `/😊我的${formData.type}/${formData.name}`
-  };
-  
-  // Define the API request options
-  const options = {
-    method: 'PUT', // Use PUT for updating, or POST if adding a new entry
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${cloudFlareToken}`, // Replace with actual token
-    },
-    body: JSON.stringify(payload),
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  try {
-    const response = await fetch('https://api.cloudflare.com/client/v4/accounts/account_id/storage/kv/namespaces/namespace_id/values/account_key', options);
-    const responseData = await response.json();
-    
-    if (response.ok) {
-      onUpdate(responseData); // Update parent component with response data
-      onClose(); // Close the modal after the update is successful
-    } else {
-      console.error('Error updating account:', responseData);
+    console.log(
+      `${JSON.parse(cloudFlareToken).token} submit ${
+        JSON.parse(cloudFlareAccountId).id
+      }`
+    );
+
+    // Prepare the form data and the payload
+    const payload = {
+      ...formData,
+      id: account?.id,
+      path: `/😊我的${formData.type}/${formData.name}`,
+    };
+
+    // Define the API request options
+    const options = {
+      method: "PUT", // Use PUT for updating, or POST if adding a new entry
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${cloudFlareToken}`, // Replace with actual token
+      },
+      body: JSON.stringify(payload),
+    };
+
+    try {
+      const response = await fetch(
+        `https://api.cloudflare.com/client/v4/accounts/${
+          JSON.parse(cloudFlareAccountId).id
+        }/storage/kv/namespaces/namespace_id/values/account_key`,
+        options
+      );
+      const responseData = await response.json();
+
+      if (response.ok) {
+        onUpdate(responseData); // Update parent component with response data
+        onClose(); // Close the modal after the update is successful
+      } else {
+        console.error("Error updating account:", responseData);
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
     }
-  } catch (err) {
-    console.error('Fetch error:', err);
-  }
-};
-
+  };
 
   if (!isOpen) return null;
 
@@ -76,9 +86,9 @@ const handleSubmit = async (e) => {
       <div className="bg-white rounded-lg w-full max-w-2xl mx-4">
         <div className="flex justify-between items-center p-4 border-b">
           <h2 className="text-lg font-semibold">
-            {account ? `更新网盘账号 - ${account.name}` : '新增网盘账号'}
+            {account ? `更新网盘账号 - ${account.name}` : "新增网盘账号"}
           </h2>
-          <button 
+          <button
             onClick={onClose}
             className="text-gray-500 hover:text-gray-700"
           >
@@ -96,7 +106,9 @@ const handleSubmit = async (e) => {
               <input
                 type="text"
                 value={formData.name}
-                onChange={e => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 required
               />
@@ -108,14 +120,16 @@ const handleSubmit = async (e) => {
                 <span className="text-red-500">*</span> 类型
               </label>
               <div className="space-x-4">
-                {['夸克网盘', 'UC网盘', '115网盘'].map(type => (
+                {["夸克网盘", "UC网盘", "115网盘"].map((type) => (
                   <label key={type} className="inline-flex items-center">
                     <input
                       type="radio"
                       name="type"
                       value={type}
                       checked={formData.type === type}
-                      onChange={e => setFormData({ ...formData, type: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, type: e.target.value })
+                      }
                       className="form-radio text-blue-500"
                     />
                     <span className="ml-2">{type}</span>
@@ -131,7 +145,9 @@ const handleSubmit = async (e) => {
               </label>
               <textarea
                 value={formData.cookie}
-                onChange={e => setFormData({ ...formData, cookie: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, cookie: e.target.value })
+                }
                 className="w-full p-2 border rounded h-32 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 required
               />
@@ -143,7 +159,9 @@ const handleSubmit = async (e) => {
               <input
                 type="text"
                 value={formData.fileId}
-                onChange={e => setFormData({ ...formData, fileId: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, fileId: e.target.value })
+                }
                 className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -154,12 +172,16 @@ const handleSubmit = async (e) => {
                 <input
                   type="checkbox"
                   checked={formData.isMain}
-                  onChange={e => setFormData({ ...formData, isMain: e.target.checked })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, isMain: e.target.checked })
+                  }
                   className="form-checkbox text-blue-500"
                 />
                 <span className="ml-2">主账号</span>
               </label>
-              <span className="text-gray-500 text-sm">主账号用来获取分享。</span>
+              <span className="text-gray-500 text-sm">
+                主账号用来获取分享。
+              </span>
             </div>
 
             <div className="text-gray-500">
@@ -179,7 +201,7 @@ const handleSubmit = async (e) => {
               type="submit"
               className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
             >
-              {account ? '更新' : '添加'}
+              {account ? "更新" : "添加"}
             </button>
           </div>
         </form>
