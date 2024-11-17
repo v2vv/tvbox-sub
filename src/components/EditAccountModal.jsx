@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 
 const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
+
+  const cloudFlareToken = localStorage.getItem('cloudflareToken');
+
   const [formData, setFormData] = useState({
     name: '',
     type: '夸克网盘',
@@ -45,7 +48,7 @@ const handleSubmit = async (e) => {
     method: 'PUT', // Use PUT for updating, or POST if adding a new entry
     headers: {
       'Content-Type': 'application/json',
-      Authorization: 'Bearer YOUR_API_TOKEN', // Replace with actual token
+      Authorization: `Bearer ${cloudFlareToken}`, // Replace with actual token
     },
     body: JSON.stringify(payload),
   };
