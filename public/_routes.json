@@ -1,5 +1,5 @@
 {
-   "version": 1,
-   "include": ["/dist/*"],
-   "exclude": ["/functions/*"]
+  "version": 1,
+  "include": ["/functions/*"],
+  "exclude": ["/dist/*"]
 }
