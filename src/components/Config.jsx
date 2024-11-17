@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Save } from "lucide-react";
 
 const ConfigPage = () => {
+  const [configSaveServerUrl, setSaveServerUrl] = useState("null");
+
   const [configCloudflareAccountId, setCloudflareAccountId] = useState({
     id: "",
   });
@@ -14,11 +16,15 @@ const ConfigPage = () => {
 
   // 从本地存储加载配置
   useEffect(() => {
+    const loadedSaveServerUrl = localStorage.getItem("saveServerUrl");
+    if (loadedSaveServerUrl) {
+      setSaveServerUrl(loadedSaveServerUrl);
+    }
     const loadedConfigCloudflareAccountId = localStorage.getItem(
       "cloudflareAccountId"
     );
     if (loadedConfigCloudflareAccountId) {
-      setConfig(JSON.parse(loadedConfigCloudflareAccountId));
+      setCloudflareAccountId(JSON.parse(loadedConfigCloudflareAccountId));
     }
 
     const loadedConfig = localStorage.getItem("cloudflareToken");
@@ -31,6 +37,8 @@ const ConfigPage = () => {
     e.preventDefault();
 
     try {
+      localStorage.setItem("saveServerUrl", configSaveServerUrl);
+      setSaveStatus("success");
       localStorage.setItem(
         "cloudflareAccountId",
         JSON.stringify(configCloudflareAccountId)
@@ -60,6 +68,22 @@ const ConfigPage = () => {
       <div className="bg-white rounded-lg shadow p-6">
         <form onSubmit={handleSubmit}>
           <div className="space-y-6">
+            {/* SaveServerUrl 配置 */}
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Save Server Url
+              </label>
+              <input
+                type="text"
+                value={configSaveServerUrl}
+                onChange={(e) => setSaveServerUrl(e.target.value)}
+                className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="请输入 Cloudflare AccountId"
+              />
+              <p className="mt-1 text-sm text-gray-500">
+                用于 Cloudflare AccountId
+              </p>
+            </div>
             {/* CloudflareAccountId 配置 */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">

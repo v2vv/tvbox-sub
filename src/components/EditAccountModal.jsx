@@ -4,6 +4,8 @@ import { X } from "lucide-react";
 const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
   const cloudFlareToken = localStorage.getItem("cloudflareToken");
   const cloudFlareAccountId = localStorage.getItem("cloudflareAccountId");
+  const saveServerUrl = localStorage.getItem("saveServerUrl");
+  const saveServerPath = "/token";
 
   const [formData, setFormData] = useState({
     name: "",
@@ -51,19 +53,17 @@ const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
 
     // Define the API request options
     const options = {
-      method: "PUT", // Use PUT for updating, or POST if adding a new entry
+      method: "POST", // Use PUT for updating, or POST if adding a new entry
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${cloudFlareToken}`, // Replace with actual token
       },
       body: JSON.stringify(payload),
     };
 
     try {
+      console.log(`${saveServerUrl}${saveServerPath}`);
       const response = await fetch(
-        `https://api.cloudflare.com/client/v4/accounts/${
-          JSON.parse(cloudFlareAccountId).id
-        }/storage/kv/namespaces/namespace_id/values/account_key`,
+        `${saveServerUrl}${saveServerPath}`,
         options
       );
       const responseData = await response.json();

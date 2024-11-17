@@ -8,10 +8,16 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## 安装 wrangler
+
 npm install wrangler --save-dev
 npm install wrangler -g
 
-## 本地开发
+## worker 本地开发
+
+npx wrangler dev
+
+## page function 本地开发
+
 Cloudflare wrangler pages 本地开发调试命令
-wrangler pages dev 
-wrangler pages dev --remote
+npx wrangler pages dev
+npx wrangler pages dev --remote

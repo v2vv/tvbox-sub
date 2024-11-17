@@ -5,23 +5,9 @@ import Config from "./Config";
 const NavigationBar = () => {
   const [currentView, setCurrentView] = useState("home");
 
-  const workertest = () => {
-    fetch("https://tvbox-sub.pages.dev", {
-      method: "GET", // 默认就是 GET 方法, 可以省略
-    })
-      .then((response) => response.json()) // 假设返回的是 JSON 数据
-      .then((data) => {
-        console.log(data); // 打印响应数据
-      })
-      .catch((error) => {
-        console.error("Error:", error); // 捕获并处理错误
-      });
-  };
-
   const renderContent = () => {
     switch (currentView) {
       case "account":
-        workertest();
         return <NetworkDriveTable />;
       case "config":
         return <Config />;
