@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NetworkDriveTable from './NetworkDriveTable';
-import Setting from './Setting';
+import Config from './Config';
 
 const NavigationBar = () => {
   const [currentView, setCurrentView] = useState('home');
@@ -10,7 +10,7 @@ const NavigationBar = () => {
       case 'account':
         return <NetworkDriveTable />;
       case 'config':
-        return <Setting />;
+        return <Config />;
       default:
         return null;
     }
