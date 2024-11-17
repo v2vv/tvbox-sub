@@ -30,14 +30,41 @@ const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
     }
   }, [account]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onUpdate({ 
-      ...formData, 
-      id: account?.id,
-      path: `/😊我的${formData.type}/${formData.name}` 
-    });
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  // Prepare the form data and the payload
+  const payload = { 
+    ...formData, 
+    id: account?.id,
+    path: `/😊我的${formData.type}/${formData.name}`
   };
+  
+  // Define the API request options
+  const options = {
+    method: 'PUT', // Use PUT for updating, or POST if adding a new entry
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer YOUR_API_TOKEN', // Replace with actual token
+    },
+    body: JSON.stringify(payload),
+  };
+
+  try {
+    const response = await fetch('https://api.cloudflare.com/client/v4/accounts/account_id/storage/kv/namespaces/namespace_id/values/account_key', options);
+    const responseData = await response.json();
+    
+    if (response.ok) {
+      onUpdate(responseData); // Update parent component with response data
+      onClose(); // Close the modal after the update is successful
+    } else {
+      console.error('Error updating account:', responseData);
+    }
+  } catch (err) {
+    console.error('Fetch error:', err);
+  }
+};
+
 
   if (!isOpen) return null;
 
