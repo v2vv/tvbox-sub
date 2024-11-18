@@ -13,11 +13,41 @@ const NetworkDriveTable = () => {
     fileId: "",
     isMain: false,
   });
+  const saveServerUrl = localStorage.getItem("saveServerUrl");
+  const saveServerPath = "/token";
 
   // 从本地存储读取账号数据
-  const loadAccounts = () => {
+  const loadAccounts = async () => {
     try {
-      const data = localStorage.getItem("networkDriveAccounts");
+      const data = "";
+
+      // Define the API request options
+      const options = {
+        method: "GET", // Use PUT for updating, or POST if adding a new entry
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      try {
+        // console.log(`${saveServerUrl}${saveServerPath}`);
+        const response = await fetch(
+          `${saveServerUrl}${saveServerPath}`,
+          options
+        );
+        const responseData = await response.json();
+
+        if (response.ok) {
+          data = responseData;
+        } else {
+          console.error("Error updating account:", responseData);
+        }
+      } catch (err) {
+        console.error("Fetch error:", err);
+      }
+
+      // const data = localStorage.getItem("networkDriveAccounts");
+      // const data = localStorage.getItem("networkDriveAccounts");
       return data
         ? JSON.parse(data)
         : [
@@ -45,20 +75,40 @@ const NetworkDriveTable = () => {
   };
 
   // 保存账号数据到本地存储
-  const saveAccounts = (accounts) => {
+  const saveAccounts = async (accounts) => {
+    // Define the API request options
+    const options = {
+      method: "POST", // Use PUT for updating, or POST if adding a new entry
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(accounts),
+    };
+
     try {
-      localStorage.setItem("networkDriveAccounts", JSON.stringify(accounts));
-      return true;
-    } catch (error) {
-      console.error("Error saving accounts:", error);
-      return false;
+      // console.log(`${saveServerUrl}${saveServerPath}`);
+      const response = await fetch(
+        `${saveServerUrl}${saveServerPath}`,
+        options
+      );
+      const responseData = await response.json();
+
+      if (response.ok) {
+      } else {
+        console.error("Error updating account:", responseData);
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
     }
   };
 
   // 初始加载数据
   useEffect(() => {
-    const loadedAccounts = loadAccounts();
-    setAccounts(loadedAccounts);
+    async () => {
+      const loadedAccounts = await loadAccounts();
+      console.log(loadedAccounts);
+      setAccounts(loadedAccounts);
+    };
   }, []);
 
   // 当编辑账号改变时更新表单数据
@@ -88,9 +138,9 @@ const NetworkDriveTable = () => {
   };
 
   const handleUpdate = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const updatedAccount = {
-      ...formData,
+      ...e,
       id: editingAccount?.id,
       path: `/😊我的${formData.type}/${formData.name}`,
     };
@@ -104,6 +154,7 @@ const NetworkDriveTable = () => {
       const newId = Math.max(...accounts.map((a) => a.id), 0) + 1;
       newAccounts = [...accounts, { ...updatedAccount, id: newId }];
     }
+    console.log(newAccounts);
     saveAccounts(newAccounts);
     setAccounts(newAccounts);
     handleModalClose();
@@ -125,8 +176,9 @@ const NetworkDriveTable = () => {
     setEditingAccount(null);
   };
 
-  const handleRefresh = () => {
-    const loadedAccounts = loadAccounts();
+  const handleRefresh = async () => {
+    const loadedAccounts = await loadAccounts();
+    console.log(loadedAccounts);
     setAccounts(loadedAccounts);
   };
 

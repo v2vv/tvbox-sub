@@ -38,45 +38,15 @@ const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(
-      `${JSON.parse(cloudFlareToken).token} submit ${
-        JSON.parse(cloudFlareAccountId).id
-      }`
-    );
+    // // Prepare the form data and the payload
+    // const payload = {
+    //   ...formData,
+    //   id: account?.id,
+    //   path: `/😊我的${formData.type}/${formData.name}`,
+    // };
 
-    // Prepare the form data and the payload
-    const payload = {
-      ...formData,
-      id: account?.id,
-      path: `/😊我的${formData.type}/${formData.name}`,
-    };
-
-    // Define the API request options
-    const options = {
-      method: "POST", // Use PUT for updating, or POST if adding a new entry
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    };
-
-    try {
-      console.log(`${saveServerUrl}${saveServerPath}`);
-      const response = await fetch(
-        `${saveServerUrl}${saveServerPath}`,
-        options
-      );
-      const responseData = await response.json();
-
-      if (response.ok) {
-        onUpdate(responseData); // Update parent component with response data
-        onClose(); // Close the modal after the update is successful
-      } else {
-        console.error("Error updating account:", responseData);
-      }
-    } catch (err) {
-      console.error("Fetch error:", err);
-    }
+    onUpdate(formData);
+    onClose(); // Close the modal after the update is successful
   };
 
   if (!isOpen) return null;
