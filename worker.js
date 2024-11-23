@@ -42,29 +42,31 @@ export default {
         // 解析请求中的JSON数据
         const data = await request.json();
 
-        //data 数据校验
-        if (data[0].id) {
-          var dataTemp = await env.TVBOX.get("token");
+        if (data.method == "add") {
+          //data 数据校验
+          // var dataTemp = await env.TVBOX.get("token");
+          // // 检查 dataTemp 是否为 null 或空字符串
+          // if (dataTemp) {
+          //   dataTemp = JSON.parse(dataTemp);
+          // } else {
+          //   dataTemp = []; // 或者设置为某个默认对象
+          // }
 
-          // 检查 dataTemp 是否为 null 或空字符串
-          if (dataTemp) {
-            dataTemp = JSON.parse(dataTemp);
-          } else {
-            dataTemp = []; // 或者设置为某个默认对象
-          }
-
-          dataTemp.push(data);
-          console.log(dataTemp);
+          // dataTemp.push(data);
+          // console.log(dataTemp);
           // 添加数据到 KV
-          await env.TVBOX.put("token", JSON.stringify(dataTemp));
+          // await env.TVBOX.put("token", JSON.stringify(dataTemp));
+          await env.TVBOX.put("token", JSON.stringify(data.data));
 
           // 返回响应
-          res = new Response(JSON.stringify(dataTemp), {
+          res = new Response(JSON.stringify(data.data), {
             headers: { ...corsHeaders, "Content-Type": "application/json" },
           });
+        } else if (data.method == "delete") {
+          await env.TVBOX.put("token", []);
         } else {
           // data 数据校验失败
-          res = new Response(JSON.stringify("请求成功，数据类型错误!"), {
+          res = new Response(JSON.stringify("请求成功，未定义操作!"), {
             headers: {
               ...corsHeaders,
               "Content-Type": "application/json",

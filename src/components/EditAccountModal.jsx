@@ -2,11 +2,6 @@ import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
 const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
-  const cloudFlareToken = localStorage.getItem("cloudflareToken");
-  const cloudFlareAccountId = localStorage.getItem("cloudflareAccountId");
-  const saveServerUrl = localStorage.getItem("saveServerUrl");
-  const saveServerPath = "/token";
-
   const [formData, setFormData] = useState({
     name: "",
     type: "夸克网盘",

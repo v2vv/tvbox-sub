@@ -19,7 +19,7 @@ const NetworkDriveTable = () => {
   // 从本地存储读取账号数据
   const loadAccounts = async () => {
     try {
-      const data = "";
+      var data = "";
 
       // Define the API request options
       const options = {
@@ -45,11 +45,12 @@ const NetworkDriveTable = () => {
       } catch (err) {
         console.error("Fetch error:", err);
       }
+      console.log(data);
 
       // const data = localStorage.getItem("networkDriveAccounts");
       // const data = localStorage.getItem("networkDriveAccounts");
       return data
-        ? JSON.parse(data)
+        ? data
         : [
             {
               id: 4001,
@@ -76,13 +77,17 @@ const NetworkDriveTable = () => {
 
   // 保存账号数据到本地存储
   const saveAccounts = async (accounts) => {
+    const accountsData = {
+      method: "add",
+      data: accounts,
+    };
     // Define the API request options
     const options = {
       method: "POST", // Use PUT for updating, or POST if adding a new entry
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(accounts),
+      body: JSON.stringify(accountsData),
     };
 
     try {
@@ -104,11 +109,13 @@ const NetworkDriveTable = () => {
 
   // 初始加载数据
   useEffect(() => {
-    async () => {
+    const fetchAccounts = async () => {
       const loadedAccounts = await loadAccounts();
       console.log(loadedAccounts);
       setAccounts(loadedAccounts);
     };
+
+    fetchAccounts(); // 调用异步函数
   }, []);
 
   // 当编辑账号改变时更新表单数据
@@ -155,6 +162,7 @@ const NetworkDriveTable = () => {
       newAccounts = [...accounts, { ...updatedAccount, id: newId }];
     }
     console.log(newAccounts);
+    // console.log(formData);
     saveAccounts(newAccounts);
     setAccounts(newAccounts);
     handleModalClose();
