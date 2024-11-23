@@ -65,8 +65,11 @@ export default {
         if (mainAccounts.length === 0) {
           return new Response("404 not found", { status: 404 });
         }
-        return new Response(JSON.stringify(mainAccounts[0].cookie), {
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        return new Response(mainAccounts[0].cookie, {
+          headers: {
+            ...corsHeaders,
+            "Content-Type": "text/html;charset=UTF-8",
+          },
         });
       },
       "/token/ali": async () => {
@@ -77,8 +80,11 @@ export default {
         if (mainAccounts.length === 0) {
           return new Response("404 not found", { status: 404 });
         }
-        return new Response(JSON.stringify(mainAccounts[0].cookie), {
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        return new Response(mainAccounts[0].cookie, {
+          headers: {
+            ...corsHeaders,
+            "Content-Type": "text/html;charset=UTF-8",
+          },
         });
       },
       "/token/uc": async () => {
@@ -89,8 +95,11 @@ export default {
         if (mainAccounts.length === 0) {
           return new Response("404 not found", { status: 404 });
         }
-        return new Response(JSON.stringify(mainAccounts[0].cookie), {
-          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        return new Response(mainAccounts[0].cookie, {
+          headers: {
+            ...corsHeaders,
+            "Content-Type": "text/html;charset=UTF-8",
+          },
         });
       },
     };
