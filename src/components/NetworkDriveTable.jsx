@@ -6,6 +6,7 @@ const NetworkDriveTable = () => {
   const [accounts, setAccounts] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingAccount, setEditingAccount] = useState(null);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     type: "夸克网盘",
@@ -20,17 +21,14 @@ const NetworkDriveTable = () => {
   const loadAccounts = async () => {
     try {
       var data = "";
-
-      // Define the API request options
       const options = {
-        method: "GET", // Use PUT for updating, or POST if adding a new entry
+        method: "GET",
         headers: {
           "Content-Type": "application/json",
         },
       };
 
       try {
-        // console.log(`${saveServerUrl}${saveServerPath}`);
         const response = await fetch(
           `${saveServerUrl}${saveServerPath}`,
           options
@@ -47,8 +45,6 @@ const NetworkDriveTable = () => {
       }
       console.log(data);
 
-      // const data = localStorage.getItem("networkDriveAccounts");
-      // const data = localStorage.getItem("networkDriveAccounts");
       return data
         ? data
         : [
@@ -75,15 +71,25 @@ const NetworkDriveTable = () => {
     }
   };
 
+  // 检查主账号是否已存在
+  const checkMainAccountExists = (type, currentId = null) => {
+    return accounts.some(
+      (account) =>
+        account.type === type && account.isMain && account.id !== currentId
+    );
+  };
+
   // 保存账号数据到本地存储
   const saveAccounts = async (accounts) => {
+    // 使用 filter 方法找出 isMain 为 true 的账号
+    const mainAccounts = accounts.filter((account) => account.isMain);
+    console.log(mainAccounts);
     const accountsData = {
       method: "add",
       data: accounts,
     };
-    // Define the API request options
     const options = {
-      method: "POST", // Use PUT for updating, or POST if adding a new entry
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -91,15 +97,13 @@ const NetworkDriveTable = () => {
     };
 
     try {
-      // console.log(`${saveServerUrl}${saveServerPath}`);
       const response = await fetch(
         `${saveServerUrl}${saveServerPath}`,
         options
       );
       const responseData = await response.json();
 
-      if (response.ok) {
-      } else {
+      if (!response.ok) {
         console.error("Error updating account:", responseData);
       }
     } catch (err) {
@@ -115,7 +119,7 @@ const NetworkDriveTable = () => {
       setAccounts(loadedAccounts);
     };
 
-    fetchAccounts(); // 调用异步函数
+    fetchAccounts();
   }, []);
 
   // 当编辑账号改变时更新表单数据
@@ -140,14 +144,23 @@ const NetworkDriveTable = () => {
   }, [editingAccount]);
 
   const handleEdit = (account) => {
+    setError("");
     setEditingAccount(account);
     setIsModalOpen(true);
   };
 
-  const handleUpdate = (e) => {
-    // e.preventDefault();
+  const handleUpdate = (formData) => {
+    // 检查是否已存在该类型的主账号
+    if (
+      formData.isMain &&
+      checkMainAccountExists(formData.type, editingAccount?.id)
+    ) {
+      setError(`${formData.type}已存在主账号，每个网盘类型只能设置一个主账号`);
+      return;
+    }
+
     const updatedAccount = {
-      ...e,
+      ...formData,
       id: editingAccount?.id,
       path: `/😊我的${formData.type}/${formData.name}`,
     };
@@ -161,10 +174,10 @@ const NetworkDriveTable = () => {
       const newId = Math.max(...accounts.map((a) => a.id), 0) + 1;
       newAccounts = [...accounts, { ...updatedAccount, id: newId }];
     }
-    console.log(newAccounts);
-    // console.log(formData);
+
     saveAccounts(newAccounts);
     setAccounts(newAccounts);
+    setError("");
     handleModalClose();
   };
 
@@ -175,6 +188,7 @@ const NetworkDriveTable = () => {
   };
 
   const handleAdd = () => {
+    setError("");
     setEditingAccount(null);
     setIsModalOpen(true);
   };
@@ -182,6 +196,7 @@ const NetworkDriveTable = () => {
   const handleModalClose = () => {
     setIsModalOpen(false);
     setEditingAccount(null);
+    setError("");
   };
 
   const handleRefresh = async () => {
@@ -287,6 +302,7 @@ const NetworkDriveTable = () => {
           onClose={handleModalClose}
           account={editingAccount}
           onUpdate={handleUpdate}
+          error={error}
         />
       )}
     </>

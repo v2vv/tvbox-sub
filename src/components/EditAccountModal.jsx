@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
-const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
+const EditAccountModal = ({ isOpen, onClose, account, onUpdate, error }) => {
   const [formData, setFormData] = useState({
     name: "",
     type: "夸克网盘",
@@ -32,16 +32,7 @@ const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // // Prepare the form data and the payload
-    // const payload = {
-    //   ...formData,
-    //   id: account?.id,
-    //   path: `/😊我的${formData.type}/${formData.name}`,
-    // };
-
     onUpdate(formData);
-    onClose(); // Close the modal after the update is successful
   };
 
   if (!isOpen) return null;
@@ -62,6 +53,12 @@ const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
         </div>
 
         <form onSubmit={handleSubmit} className="p-4">
+          {error && (
+            <div className="mb-4 p-3 bg-red-100 text-red-700 rounded">
+              {error}
+            </div>
+          )}
+
           <div className="space-y-4">
             {/* 名称输入 */}
             <div>
@@ -85,7 +82,7 @@ const EditAccountModal = ({ isOpen, onClose, account, onUpdate }) => {
                 <span className="text-red-500">*</span> 类型
               </label>
               <div className="space-x-4">
-                {["夸克网盘", "UC网盘", "115网盘"].map((type) => (
+                {["夸克网盘", "UC网盘", "115网盘", "阿里网盘"].map((type) => (
                   <label key={type} className="inline-flex items-center">
                     <input
                       type="radio"

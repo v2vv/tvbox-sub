@@ -1,102 +1,116 @@
-// Cloudflare Worker 示例，根据路径选择不同回应并添加自定义头，同时缓存响应
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     const pathname = url.pathname;
 
-    let res;
-
     const corsHeaders = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
-      "Access-Control-Allow-Headers": "Content-Type", // 添加这一行
+      "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Max-Age": "86400",
     };
 
-    // 如果是 OPTIONS 请求，返回 CORS 预检响应
+    // 统一处理 OPTIONS 请求，返回 CORS 预检响应
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
     }
 
-    // 根据不同路径返回不同的回应
-    if (pathname === "/") {
-      res = new Response("Welcome to the homepage!", {
-        headers: { "content-type": "text/plain" },
-      });
-    } else if (pathname === "/token/ali") {
-      const token = await env.TVBOX.get("token");
-      try {
-        const aliToken = JSON.parse(token).ali.main.token;
-      } catch (error) {}
+    // 通用的缓存和响应头设置
+    const addCustomHeaders = (response) => {
+      response.headers.set("x-foo", "bar");
+      return response;
+    };
 
-      res = new Response(`This is the about page ${token}.`, {
-        headers: { "content-type": "text/plain" },
-      });
-    } else if (pathname === "/contact") {
-      res = new Response("Contact us at contact@example.com.", {
-        headers: { "content-type": "text/plain" },
-      });
-    } else if (pathname === "/token") {
-      //token "POST" 处理
-      if (request.method === "POST") {
-        // 解析请求中的JSON数据
-        const data = await request.json();
-
-        if (data.method == "add") {
-          //data 数据校验
-          // var dataTemp = await env.TVBOX.get("token");
-          // // 检查 dataTemp 是否为 null 或空字符串
-          // if (dataTemp) {
-          //   dataTemp = JSON.parse(dataTemp);
-          // } else {
-          //   dataTemp = []; // 或者设置为某个默认对象
-          // }
-
-          // dataTemp.push(data);
-          // console.log(dataTemp);
-          // 添加数据到 KV
-          // await env.TVBOX.put("token", JSON.stringify(dataTemp));
-          await env.TVBOX.put("token", JSON.stringify(data.data));
-
-          // 返回响应
-          res = new Response(JSON.stringify(data.data), {
-            headers: { ...corsHeaders, "Content-Type": "application/json" },
-          });
-        } else if (data.method == "delete") {
-          await env.TVBOX.put("token", []);
-        } else {
-          // data 数据校验失败
-          res = new Response(JSON.stringify("请求成功，未定义操作!"), {
-            headers: {
-              ...corsHeaders,
-              "Content-Type": "application/json",
-            },
+    // 路径处理映射
+    const pathHandlers = {
+      "/": async () =>
+        new Response("Welcome to the homepage!", {
+          headers: { "content-type": "text/plain" },
+        }),
+      "/contact": async () =>
+        new Response("Contact us at contact@example.com.", {
+          headers: { "content-type": "text/plain" },
+        }),
+      "/token": async (request) => {
+        if (request.method === "POST") {
+          const data = await request.json();
+          if (data.method === "add") {
+            await env.TVBOX.put("token", JSON.stringify(data.data));
+            return new Response(JSON.stringify(data.data), {
+              headers: { ...corsHeaders, "Content-Type": "application/json" },
+            });
+          } else if (data.method === "delete") {
+            await env.TVBOX.put("token", []);
+            return new Response("Token deleted", { headers: corsHeaders });
+          }
+          return new Response(
+            JSON.stringify("Request successful, undefined operation!"),
+            { headers: { ...corsHeaders, "Content-Type": "application/json" } }
+          );
+        } else if (request.method === "GET") {
+          const tokenData = await env.TVBOX.get("token");
+          return new Response(tokenData, {
+            headers: { ...corsHeaders, "content-type": "text/plain" },
           });
         }
-      } else if (request.method === "GET") {
-        //token "GET" 处理
-        const restemp = await env.TVBOX.get("token");
-        res = new Response(restemp, {
-          headers: { ...corsHeaders, "content-type": "text/plain" },
-        });
-      } else {
-        res = new Response("Only POST/GET requests are allowed", {
+        return new Response("Only POST/GET requests are allowed", {
           status: 405,
         });
-      }
+      },
+      "/token/quark": async () => {
+        const accounts = JSON.parse(await env.TVBOX.get("token"));
+        const mainAccounts = accounts.filter(
+          (account) => account.isMain && account.type === "夸克网盘"
+        );
+        if (mainAccounts.length === 0) {
+          return new Response("404 not found", { status: 404 });
+        }
+        return new Response(JSON.stringify(mainAccounts[0].cookie), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      },
+      "/token/ali": async () => {
+        const accounts = JSON.parse(await env.TVBOX.get("token"));
+        const mainAccounts = accounts.filter(
+          (account) => account.isMain && account.type === "阿里网盘"
+        );
+        if (mainAccounts.length === 0) {
+          return new Response("404 not found", { status: 404 });
+        }
+        return new Response(JSON.stringify(mainAccounts[0].cookie), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      },
+      "/token/uc": async () => {
+        const accounts = JSON.parse(await env.TVBOX.get("token"));
+        const mainAccounts = accounts.filter(
+          (account) => account.isMain && account.type === "UC网盘"
+        );
+        if (mainAccounts.length === 0) {
+          return new Response("404 not found", { status: 404 });
+        }
+        return new Response(JSON.stringify(mainAccounts[0].cookie), {
+          headers: { ...corsHeaders, "Content-Type": "application/json" },
+        });
+      },
+    };
+
+    let res;
+
+    // 根据路径调用对应处理函数
+    if (pathHandlers[pathname]) {
+      res = await pathHandlers[pathname](request);
     } else {
-      // 转发原始请求
-      res = await fetch(request);
-      res = new Response(res.body, res);
+      // 对于未知路径，返回 404
+      res = new Response("404 Not Found", {
+        status: 404,
+        headers: corsHeaders,
+      });
     }
 
-    // 添加自定义头
-    res.headers.set("x-foo", "bar");
-
-    // 异步缓存响应
+    // 添加自定义头并缓存响应
+    res = addCustomHeaders(res);
     ctx.waitUntil(caches.default.put(request, res.clone()));
-
-    // 返回响应
     return res;
   },
 };

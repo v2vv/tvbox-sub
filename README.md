@@ -21,3 +21,8 @@ npx wrangler dev
 Cloudflare wrangler pages 本地开发调试命令
 npx wrangler pages dev
 npx wrangler pages dev --remote
+
+## vite 调试
+
+npm run vite / npm run dev  
+npx vite / npx vite dev
