@@ -16,6 +16,18 @@ npm install wrangler -g
 
 npx wrangler dev
 
+## 部署
+
+### 前端编译
+
+npx vite build
+
+### 上传 worker
+
+npx wrangler deploy
+
+## worker 部署
+
 ## page function 本地开发
 
 Cloudflare wrangler pages 本地开发调试命令

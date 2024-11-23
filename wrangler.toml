@@ -7,3 +7,4 @@ kv_namespaces = [
 ]
 
 assets = { directory = "./dist/", binding = "ASSETS" }
+
