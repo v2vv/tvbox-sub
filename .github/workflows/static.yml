@@ -32,12 +32,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: 创建 pageDir 文件夹
+        run: mkdir -p /pageDir/localPackages/pg /pageDir/localPackages/zx
+
       - name: Install unzip utility
         run: sudo apt-get install unzip
       - name: Unzip the archive
-        run: find /home/user/documents -type f -name '*pg*.zip' -exec unzip {} -d /pageDir/localPackages/pg \
+        run: find /home/user/documents -type f -name '*pg*.zip' -exec unzip {} -d /pageDir/localPackages/pg \;
       - name: Unzip the archive
-        run: find /home/user/documents -type f -name '*真心*.zip' -exec unzip {} -d /pageDir/localPackages/pg \
+        run: find /home/user/documents -type f -name '*真心*.zip' -exec unzip {} -d /pageDir/localPackages/zx \;
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
