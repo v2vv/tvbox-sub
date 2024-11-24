@@ -47,7 +47,7 @@ jobs:
           ALI_TOKEN: ${{secrets.ALI_TOKEN}}
           ALI_OPEN_TOKEN: ${{secrets.ALI_OPEN_TOKEN}}
           UC_COOKIE: ${{secrets.UC_COOKIE}}
-          QUARK_COOKIE: ${{secrets.ALI_TOKEN}}
+          QUARK_COOKIE: ${{secrets.QUARK_COOKIE}}
         run: |
           envsubst <  templates/config/pg.tokenm.template > pageDir/localPackages/pg/lib/tokenm.json
           envsubst <  templates/config/zx.config.template > pageDir/localPackages/zx/json/peizhi.json
