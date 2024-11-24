@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 创建 pageDir 文件夹
-        run: mkdir -p pageDir/repo pageDir/config/pg pageDir/config/zx  pageDir/localPackages/pg pageDir/localPackages/zx
+        run: mkdir -p pageDir/repo pageDir/token pageDir/config/zx  pageDir/localPackages/pg pageDir/localPackages/zx
       - name: Unzip the archive
         run: find localPackages -type f -name '*pg*.zip' -exec unzip {} -d pageDir/localPackages/pg \;
       - name: Unzip the archive
@@ -49,10 +49,10 @@ jobs:
           UC_COOKIE: ${{secrets.UC_COOKIE}}
           QUARK_COOKIE: ${{secrets.ALI_TOKEN}}
         run: |
-          envsubst <  templates/config/pg.tokenm.template > pageDir/config/pg/tokenm
-          envsubst <  templates/config/zx.config.template > pageDir/config/zx/peizhi.json
-          echo $ALI_TOKEN > pageDir/config/ali_token
-          echo $UC_COOKIE > pageDir/config/uc_cookie
+          envsubst <  templates/config/pg.tokenm.template > pageDir/localPackages/pg/lib/tokenm
+          envsubst <  templates/config/zx.config.template > pageDir/config/zx/json/peizhi.json
+          echo $ALI_TOKEN > pageDir/token/ali_token
+          echo $UC_COOKIE > pageDir/token/uc_cookie
           echo $QUARK_COOKIE > pageDir/config/quark_cookie
 
       - name: Setup Pages
