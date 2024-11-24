@@ -41,6 +41,8 @@ jobs:
         run: find localPackages -type f -name '*pg*.zip' -exec unzip {} -d pageDir/localPackages/pg \;
       - name: Unzip the archive
         run: find localPackages -type f -name '*真心*.zip' -exec unzip {} -d pageDir/localPackages/zx \;
+      - name: 复制仓库文件夹
+        run: cp repo/repo.json pageDir/repo.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
