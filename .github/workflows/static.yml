@@ -50,7 +50,7 @@ jobs:
           QUARK_COOKIE: ${{secrets.ALI_TOKEN}}
         run: |
           envsubst <  templates/config/pg.tokenm.template > pageDir/localPackages/pg/lib/tokenm
-          envsubst <  templates/config/zx.config.template > pageDir/config/zx/json/peizhi.json
+          envsubst <  templates/config/zx.config.template > pageDir/localPackages/zx/json/peizhi.json
           echo $ALI_TOKEN > pageDir/token/ali_token
           echo $UC_COOKIE > pageDir/token/uc_cookie
           echo $QUARK_COOKIE > pageDir/config/quark_cookie
