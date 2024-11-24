@@ -49,7 +49,7 @@ jobs:
           UC_COOKIE: ${{secrets.UC_COOKIE}}
           QUARK_COOKIE: ${{secrets.ALI_TOKEN}}
         run: |
-          envsubst <  templates/config/pg.tokenm.template > pageDir/localPackages/pg/lib/tokenm
+          envsubst <  templates/config/pg.tokenm.template > pageDir/localPackages/pg/lib/tokenm.json
           envsubst <  templates/config/zx.config.template > pageDir/localPackages/zx/json/peizhi.json
           echo $ALI_TOKEN > pageDir/token/ali_token
           echo $UC_COOKIE > pageDir/token/uc_cookie
