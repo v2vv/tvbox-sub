@@ -48,10 +48,11 @@ jobs:
           ALI_OPEN_TOKEN: ${{secrets.ALI_OPEN_TOKEN}}
           UC_COOKIE: ${{secrets.UC_COOKIE}}
           QUARK_COOKIE: ${{secrets.QUARK_COOKIE}}
+          URL: ${{secrets.URL}}
         run: |
           envsubst <  templates/config/pg.tokenm.template > pageDir/localPackages/pg/lib/tokenm.json
           envsubst <  templates/config/zx.config.template > pageDir/localPackages/zx/json/peizhi.json
-          node script/convert.jsm "pg" "https://tvbox.lvhongyuan.site"   pageDir/localPackages/pg/jsm.json pageDir/localPackages/pg/jsm.json
+          node script/convert.mjs "pg" $URL   pageDir/localPackages/pg/jsm.json pageDir/localPackages/pg/jsm.json
           echo $ALI_TOKEN > pageDir/token/ali_token
           echo $UC_COOKIE > pageDir/token/uc_cookie
           echo $QUARK_COOKIE > pageDir/config/quark_cookie
