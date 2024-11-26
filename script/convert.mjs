@@ -57,6 +57,32 @@ const subHandler = {
 
     return jsonData;
   },
+  zx: (data) => {
+    const updatedData = data
+      .replace(
+        new RegExp(escapeRegExp("./lib"), "g"),
+        sanitizeUrl(url, "localPackages/zx/lib")
+      )
+      .replace(
+        new RegExp(escapeRegExp("./json"), "g"),
+        sanitizeUrl(url, "localPackages/zx/json")
+      )
+      .replace(
+        new RegExp(escapeRegExp('"spider": ".'), "g"),
+        '"jar": "' + sanitizeUrl(url, "localPackages/zx/json")
+      );
+
+    const jsonData = JSON.parse(updatedData);
+
+    // 更新 JSON 数据中的部分字段
+    jsonData.sites.forEach((site) => {
+      site.jar = jsonData.jar;
+    });
+
+    delete jsonData.jar;
+
+    return jsonData;
+  },
 };
 
 // 确保 subName 有对应的 handler

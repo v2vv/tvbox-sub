@@ -53,6 +53,7 @@ jobs:
           envsubst <  templates/config/pg.tokenm.template > pageDir/localPackages/pg/lib/tokenm.json
           envsubst <  templates/config/zx.config.template > pageDir/localPackages/zx/json/peizhi.json
           node script/convert.mjs "pg" $URL   pageDir/localPackages/pg/jsm.json pageDir/localPackages/pg/jsm.json
+          node script/convert.mjs "zx" $URL   pageDir/localPackages/zx/FongMi.json pageDir/localPackages/zx/FongMi.json
           echo $ALI_TOKEN > pageDir/token/ali_token
           echo $UC_COOKIE > pageDir/token/uc_cookie
           echo $QUARK_COOKIE > pageDir/config/quark_cookie
