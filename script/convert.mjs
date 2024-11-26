@@ -1,13 +1,13 @@
 import { promises as fs } from "fs";
 import { dirname } from "path";
+import * as core from "@actions/core"; // 引入 @actions/core
 
-//node script/convert.js "pg" "https://tvbox.lvhongyuan.site"   data.json datacovert.json
 // 获取命令行参数
 const [, , subName, url, inputFileName, outputFileName] = process.argv;
 
 // 参数验证
 if (!subName || !url || !inputFileName || !outputFileName) {
-  console.error(
+  core.setFailed(
     "请提供输入文件名、输出文件名、要替换的旧字符串和新字符串。用法: node insertSpider.mjs <输入文件名> <输出文件名> <旧字符串> <新字符串>"
   );
   process.exit(1);
@@ -21,7 +21,7 @@ await fs.mkdir(outputDir, { recursive: true });
 try {
   await fs.access(inputFileName);
 } catch (error) {
-  console.error(`输入文件不存在: ${inputFileName}`);
+  core.setFailed(`输入文件不存在: ${inputFileName}`);
   process.exit(1);
 }
 
@@ -65,7 +65,7 @@ const subHandler = {
 
 // 确保 subName 有对应的 handler
 if (!subHandler[subName]) {
-  console.error(`无效的 subName: ${subName}`);
+  core.setFailed(`无效的 subName: ${subName}`);
   process.exit(1);
 }
 
@@ -76,6 +76,6 @@ try {
   await fs.writeFile(outputFileName, JSON.stringify(updatedJsonData, null, 2));
   console.log(`已成功更新文件 ${outputFileName}`);
 } catch (error) {
-  console.error(`操作失败: ${error.message}`);
+  core.setFailed(`操作失败: ${error.message}`);
   process.exit(1);
 }
