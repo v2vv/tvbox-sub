@@ -69,7 +69,7 @@ const subHandler = {
       )
       .replace(
         new RegExp(escapeRegExp('"spider": ".'), "g"),
-        '"jar": "' + sanitizeUrl(url, "localPackages/zx/json")
+        '"jar": "' + sanitizeUrl(url, "localPackages/zx")
       );
 
     const jsonData = JSON.parse(updatedData);
