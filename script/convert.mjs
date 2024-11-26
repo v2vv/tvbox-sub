@@ -45,20 +45,16 @@ const subHandler = {
       .replace(
         new RegExp(escapeRegExp("./js"), "g"),
         sanitizeUrl(url, "localPackages/pg/js")
-      )
-      .replace(
-        new RegExp(escapeRegExp("./pg.jar"), "g"),
-        sanitizeUrl(url, "localPackages/pg/pg.jar")
       );
 
     const jsonData = JSON.parse(updatedData);
+    delete jsonData.spider;
 
     // 更新 JSON 数据中的部分字段
     jsonData.sites.forEach((site) => {
-      site.spider = jsonData.spider;
+      site.jar = sanitizeUrl(url, "localPackages/pg/pg.jar");
     });
 
-    delete jsonData.spider;
     return jsonData;
   },
 };
