@@ -6,5 +6,5 @@ kv_namespaces = [
   { binding = "TVBOX", id = "eb0fd6580e6f46f1950d66a314e0d4c5" }
 ]
 
-assets = { directory = "./dist/", binding = "ASSETS" }
+# assets = { directory = "./dist/", binding = "ASSETS" }
 
