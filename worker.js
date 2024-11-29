@@ -44,7 +44,7 @@ export default {
 
       // 返回新的响应
       // return JSON.stringify(githubResponse.body);
-      return drive[name];
+      return fileContent.replace(/[\r\n]+/g, "");
     }
 
     // 路径处理映射
