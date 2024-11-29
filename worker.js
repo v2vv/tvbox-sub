@@ -27,37 +27,6 @@ export default {
         new Response("Welcome to the homepage!", {
           headers: { "content-type": "text/plain" },
         }),
-      "/contact": async () =>
-        new Response("Contact us at contact@example.com.", {
-          headers: { "content-type": "text/plain" },
-        }),
-      "/token": async (request) => {
-        if (request.method === "POST") {
-          const data = await request.json();
-          if (data.method === "add") {
-            await env.TVBOX.put("token", JSON.stringify(data.data));
-            return new Response(JSON.stringify(data.data), {
-              headers: { ...corsHeaders, "Content-Type": "application/json" },
-            });
-          } else if (data.method === "delete") {
-            await env.TVBOX.put("token", []);
-            return new Response("Token deleted", { headers: corsHeaders });
-          }
-          return new Response(
-            JSON.stringify("Request successful, undefined operation!"),
-            { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-          );
-        } else if (request.method === "GET") {
-          const tokenData = await env.TVBOX.get("token");
-          return new Response(tokenData, {
-            headers: { ...corsHeaders, "content-type": "text/plain" },
-          });
-        }
-        return new Response("Only POST/GET requests are allowed", {
-          status: 405,
-        });
-      },
-
       "/sub/ok": async () => {
         const response = await fetch(
           `https://py.nxog.top/zm/api/jm/api.php?ou=${encodeURIComponent(
