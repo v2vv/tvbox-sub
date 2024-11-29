@@ -117,6 +117,51 @@ export default {
         });
       },
       "/sub/fan": async () => {},
+      "/sub/ouge": async () => {
+        console.log("start");
+        const response = await fetch(
+          "https://ua.fongmi.eu.org/box.php?url=http%3A%2F%2Ftv.nxog.top%2Fm%2F",
+          {
+            method: "GET",
+          }
+        );
+        console.log(response);
+        // 获取响应的 JSON 数据
+        const data = await response.text();
+
+        const data_string = JSON.stringify(data);
+
+        console.log(data_string);
+        // 帮助函数：转义正则中的特殊字符
+        const escapeRegExp = (str) =>
+          str.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, "\\$&");
+
+        const custom_data_string = data_string
+          .replace(
+            new RegExp(escapeRegExp("http://127.0.0.1:9978/file/TV/.uc"), "g"),
+            "https://tvbox.lvhongyuan.site/token/uc_cookie"
+          )
+          .replace(
+            new RegExp(
+              escapeRegExp("http://127.0.0.1:9978/file/TV/.quark"),
+              "g"
+            ),
+            "https://tvbox.lvhongyuan.site/token/quark_cookie"
+          )
+          .replace(
+            new RegExp(
+              escapeRegExp("http://127.0.0.1:9978/file/TV/token.txt"),
+              "g"
+            ),
+            "https://tvbox.lvhongyuan.site/token/ali_token"
+          );
+        return new Response(custom_data_string, {
+          headers: {
+            ...corsHeaders,
+            "Content-Type": "application/json",
+          },
+        });
+      },
     };
 
     let res;
