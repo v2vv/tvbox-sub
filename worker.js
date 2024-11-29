@@ -21,33 +21,6 @@ export default {
       return response;
     };
 
-    // async function githubFetch(url) {
-    //   // 通过 fetch 请求 GitHub 文件
-    //   const githubResponse = await fetch(url, {
-    //     method: "GET",
-    //   });
-
-    //   // 检查响应是否成功
-    //   if (!githubResponse.ok) {
-    //     return new Response("Failed to fetch from GitHub", {
-    //       status: githubResponse.status,
-    //     });
-    //   }
-
-    //   // 修改响应头
-    //   const newHeaders = new Headers(githubResponse.headers);
-    //   if (newHeaders.get("Content-Type") === "application/octet-stream") {
-    //     newHeaders.set("Content-Type", "text/html;charset=UTF-8"); // 替换为你想要的类型
-    //   }
-
-    //   // 返回新的响应
-    //   return new Response(githubResponse.body, {
-    //     status: githubResponse.status,
-    //     statusText: githubResponse.statusText,
-    //     headers: newHeaders,
-    //   });
-    // }
-
     // 路径处理映射
     const pathHandlers = {
       "/": async () =>
@@ -84,66 +57,7 @@ export default {
           status: 405,
         });
       },
-      // "/token/quark": async () => {
-      //   // 定义目标 GitHub 文件的 URL
-      //   const githubURL = "https://tvbox.lvhongyuan.site/token/quark_cookie"; // 替换为实际的 GitHub 文件地址
-      //   return githubFetch(githubURL);
-      // },
-      // // "/token/quark": async () => {
-      // //   const accounts = JSON.parse(await env.TVBOX.get("token"));
-      // //   const mainAccounts = accounts.filter(
-      // //     (account) => account.isMain && account.type === "夸克网盘"
-      // //   );
-      // //   if (mainAccounts.length === 0) {
-      // //     return new Response("404 not found", { status: 404 });
-      // //   }
-      // //   return new Response(mainAccounts[0].cookie, {
-      // //     headers: {
-      // //       ...corsHeaders,
-      // //       "Content-Type": "text/html;charset=UTF-8",
-      // //     },
-      // //   });
-      // // },
-      // "/token/ali": async () => {
-      //   // 定义目标 GitHub 文件的 URL
-      //   const githubURL = "https://tvbox.lvhongyuan.site/token/ali_token"; // 替换为实际的 GitHub 文件地址
-      //   return githubFetch(githubURL);
-      // },
-      // // "/token/ali": async () => {
-      // //   const accounts = JSON.parse(await env.TVBOX.get("token"));
-      // //   const mainAccounts = accounts.filter(
-      // //     (account) => account.isMain && account.type === "阿里网盘"
-      // //   );
-      // //   if (mainAccounts.length === 0) {
-      // //     return new Response("404 not found", { status: 404 });
-      // //   }
-      // //   return new Response(mainAccounts[0].cookie, {
-      // //     headers: {
-      // //       ...corsHeaders,
-      // //       "Content-Type": "text/html;charset=UTF-8",
-      // //     },
-      // //   });
-      // // },
-      // "/token/uc": async () => {
-      //   // 定义目标 GitHub 文件的 URL
-      //   const githubURL = "https://tvbox.lvhongyuan.site/token/uc_cookie"; // 替换为实际的 GitHub 文件地址
-      //   return githubFetch(githubURL);
-      // },
-      // // "/token/uc": async () => {
-      // //   const accounts = JSON.parse(await env.TVBOX.get("token"));
-      // //   const mainAccounts = accounts.filter(
-      // //     (account) => account.isMain && account.type === "UC网盘"
-      // //   );
-      // //   if (mainAccounts.length === 0) {
-      // //     return new Response("404 not found", { status: 404 });
-      // //   }
-      // //   return new Response(mainAccounts[0].cookie, {
-      // //     headers: {
-      // //       ...corsHeaders,
-      // //       "Content-Type": "text/html;charset=UTF-8",
-      // //     },
-      // //   });
-      // // },
+
       "/sub/ok": async () => {
         const response = await fetch(
           `https://py.nxog.top/zm/api/jm/api.php?ou=${encodeURIComponent(
