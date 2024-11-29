@@ -101,7 +101,6 @@ export default {
           },
         });
       },
-      "/sub/fan": async () => {},
       "/sub/ouge": async () => {
         console.log("start");
         const response = await fetch(
