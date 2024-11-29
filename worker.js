@@ -3,6 +3,10 @@ export default {
     const url = new URL(request.url);
     const pathname = url.pathname;
 
+    const ali_token = "https://tvbox.lvhongyuan.site/token/ali_token";
+    const quark_cookie = "https://tvbox.lvhongyuan.site/token/quark_cookie";
+    const uc_cookie = "https://tvbox.lvhongyuan.site/token/uc_cookie";
+
     const corsHeaders = {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET,HEAD,POST,OPTIONS",
@@ -52,15 +56,15 @@ export default {
         const custom_data_string = data_string
           .replace(
             new RegExp(escapeRegExp("file://TV/ali_token.txt"), "g"),
-            "https://tvbox.lvhongyuan.site/token/ali_token"
+            ali_token
           )
           .replace(
             new RegExp(escapeRegExp("file://TV/quark_cookie.txt"), "g"),
-            "https://tvbox.lvhongyuan.site/token/quark_cookie"
+            quark_cookie
           )
           .replace(
             new RegExp(escapeRegExp("file://TV/uc_cookie.txt"), "g"),
-            "https://tvbox.lvhongyuan.site/token/uc_cookie"
+            uc_cookie
           );
 
         return new Response(custom_data_string, {
@@ -90,21 +94,21 @@ export default {
         const custom_data_string = data_string
           .replace(
             new RegExp(escapeRegExp("http://127.0.0.1:9978/file/TV/.uc"), "g"),
-            "https://tvbox.lvhongyuan.site/token/uc_cookie"
+            uc_cookie
           )
           .replace(
             new RegExp(
               escapeRegExp("http://127.0.0.1:9978/file/TV/.quark"),
               "g"
             ),
-            "https://tvbox.lvhongyuan.site/token/quark_cookie"
+            quark_cookie
           )
           .replace(
             new RegExp(
               escapeRegExp("http://127.0.0.1:9978/file/TV/token.txt"),
               "g"
             ),
-            "https://tvbox.lvhongyuan.site/token/ali_token"
+            ali_token
           );
         return new Response(custom_data_string, {
           headers: {
