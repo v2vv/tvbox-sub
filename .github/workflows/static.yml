@@ -54,9 +54,9 @@ jobs:
           envsubst <  templates/config/zx.config.template > pageDir/localPackages/zx/json/peizhi.json
           node script/convert.mjs "pg" $URL   pageDir/localPackages/pg/jsm.json pageDir/localPackages/pg/jsm.json
           node script/convert.mjs "zx" $URL   pageDir/localPackages/zx/FongMi.json pageDir/localPackages/zx/FongMi.json
-          echo $ALI_TOKEN > pageDir/token/ali_token.txt
-          echo $UC_COOKIE > pageDir/token/uc_cookie.txt
-          echo $QUARK_COOKIE > pageDir/token/quark_cookie.txt
+          echo $ALI_TOKEN > pageDir/token/ali_token
+          echo $UC_COOKIE > pageDir/token/uc_cookie
+          echo $QUARK_COOKIE > pageDir/token/quark_cookie
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

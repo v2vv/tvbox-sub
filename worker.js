@@ -28,8 +28,6 @@ export default {
         uc: "https://tvbox.lvhongyuan.site/token/uc_cookie",
       };
 
-      console.log(drive[name]);
-
       // 通过 fetch 请求 GitHub 文件
       const githubResponse = await fetch(drive[name], {
         method: "GET",
@@ -41,10 +39,12 @@ export default {
           status: githubResponse.status,
         });
       }
-      console.log(githubResponse.body);
+      const fileContent = await githubResponse.text();
+      console.log(fileContent);
 
       // 返回新的响应
-      return JSON.stringify(githubResponse.body);
+      // return JSON.stringify(githubResponse.body);
+      return drive[name];
     }
 
     // 路径处理映射
