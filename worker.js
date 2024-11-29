@@ -78,13 +78,11 @@ export default {
             method: "GET",
           }
         );
-        console.log(response);
         // 获取响应的 JSON 数据
         const data_string = await response.text();
 
         // const data_string = JSON.stringify(data);
 
-        console.log(data_string);
         // 帮助函数：转义正则中的特殊字符
         const escapeRegExp = (str) =>
           str.replace(/[.*+?^=!:${}()|\[\]\/\\]/g, "\\$&");
