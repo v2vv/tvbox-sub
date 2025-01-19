@@ -41,7 +41,7 @@ jobs:
       - name: Unzip the archive
         run: find localPackages -type f -name '*pg*.zip' -exec unzip {} -d pageDir/localPackages/pg \;
       - name: Unzip the archive
-        run: find localPackages -type f -name '*真心*.zip' -exec unzip {} -d pageDir/localPackages/zx \;
+        run: find localPackages -type f -name '*zx*.zip' -exec unzip {} -d pageDir/localPackages/zx \;
       - name: 生成仓库文件
         env:
           URL: ${{secrets.URL}}
