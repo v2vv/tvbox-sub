@@ -58,7 +58,11 @@ const subHandler = {
     return jsonData;
   },
   zx: (data) => {
-    const updatedData = data
+     // 移除以 "//" 开头的行
+    const cleanedData = data.split('\n')
+                           .filter(line => !line.trim().startsWith('//'))
+                           .join('\n');
+    const updatedData = cleanedData
       .replace(
         new RegExp(escapeRegExp("./lib"), "g"),
         sanitizeUrl(url, "localPackages/zx/lib")
