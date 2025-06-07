@@ -1,11 +1,11 @@
 {
-  "aliToken" : "${ALI_TOKEN}",
-  "quarkCookie" : "${QUARK_COOKIE}",
-  "ucCookie" : "${UC_COOKIE}",
-  "115Cookie" : "",
-  "pwdRb115" : "",
-  "goServerUrl" : "http://127.0.0.1:9966",
-  "ydAuth" : "",
-  "proxy" : "http://127.0.0.1:1072",
-  "tgPic" : "false"
+    "aliToken": "${ALI_TOKEN}",
+    "quarkCookie": "${QUARK_COOKIE}",
+    "ucCookie": "${UC_COOKIE}",
+    "115Cookie": "",
+    "pwdRb115": "",
+    "goServerUrl": "http://127.0.0.1:9966",
+    "ydAuth": "",
+    "proxy": "http://127.0.0.1:1072",
+    "tgPic": "false"
 }
